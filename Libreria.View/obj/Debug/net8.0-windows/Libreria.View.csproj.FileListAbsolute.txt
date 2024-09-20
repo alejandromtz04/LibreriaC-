@@ -1,0 +1,15 @@
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\bin\Debug\net8.0-windows\Libreria.View.exe
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\bin\Debug\net8.0-windows\Libreria.View.deps.json
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\bin\Debug\net8.0-windows\Libreria.View.runtimeconfig.json
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\bin\Debug\net8.0-windows\Libreria.View.dll
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\bin\Debug\net8.0-windows\Libreria.View.pdb
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\obj\Debug\net8.0-windows\Libreria.View.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\obj\Debug\net8.0-windows\Libreria.View.AssemblyInfoInputs.cache
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\obj\Debug\net8.0-windows\Libreria.View.AssemblyInfo.cs
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\obj\Debug\net8.0-windows\Libreria.View.csproj.CoreCompileInputs.cache
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\obj\Debug\net8.0-windows\Libreria.View.sourcelink.json
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\obj\Debug\net8.0-windows\Libreria.View.dll
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\obj\Debug\net8.0-windows\refint\Libreria.View.dll
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\obj\Debug\net8.0-windows\Libreria.View.pdb
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\obj\Debug\net8.0-windows\Libreria.View.genruntimeconfig.cache
+C:\Users\Not4l\source\repos\Libreria.Entity\Libreria.View\obj\Debug\net8.0-windows\ref\Libreria.View.dll
