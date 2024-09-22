@@ -42,6 +42,36 @@ namespace Libreria.DataAccess
             return result;
         }
 
+        public List<Employee> GetAllEmployees()
+        {
+            List<Employee> employeesList = new List<Employee>();
+
+            using (SqlConnection _connnection = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("spEmployeeGetAll", _connnection))
+                {
+                    _connnection.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataReader reader = cmd.ExecuteReader()) 
+                    {
+                        while (reader.Read()) 
+                        {
+                            Employee employee = new Employee
+                            {
+                                Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                                EmployeeName = reader.GetString(reader.GetOrdinal("EmployeeName")),
+                                EmployeeLastName = reader.GetString(reader.GetOrdinal("EmployeeLastName")),
+                                EmployeeAge = reader.GetInt32(reader.GetOrdinal("Employee")),
+                            };
+                            employeesList.Add(employee);
+                        }
+                    }
+                }
+            }
+            return employeesList;
+        }
+
         public bool UpdateEmployee(int Id)
         {
             bool result = false;
