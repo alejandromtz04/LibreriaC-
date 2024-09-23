@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Not4l\\source\\repos\\Libreria.Entity\\Libreria.View\\Libreria.View.csproj",
+      "projectUniqueName": "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.View\\Libreria.View.csproj",
       "projectName": "Libreria.View",
-      "projectPath": "C:\\Users\\Not4l\\source\\repos\\Libreria.Entity\\Libreria.View\\Libreria.View.csproj",
+      "projectPath": "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.View\\Libreria.View.csproj",
       "packagesPath": "C:\\Users\\Not4l\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Not4l\\source\\repos\\Libreria.Entity\\Libreria.View\\obj\\",
+      "outputPath": "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.View\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Not4l\\AppData\\Roaming\\NuGet\\NuGet.Config",

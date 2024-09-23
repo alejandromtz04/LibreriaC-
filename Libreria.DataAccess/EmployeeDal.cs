@@ -22,7 +22,7 @@ namespace Libreria.DataAccess
         }
 
 
-        public bool CreateEmployee(Employee employee)
+        public bool CreateEmployee(Employee employee, EmployeeContact employeeContact)
         {
             bool result = false;
 
@@ -32,9 +32,19 @@ namespace Libreria.DataAccess
                 {
                     _connection.Open();
                     cmd.CommandType = CommandType.StoredProcedure;
+
+                    // This is for Employee
+
                     cmd.Parameters.AddWithValue("@EmployeeName", employee.EmployeeName);
                     cmd.Parameters.AddWithValue("@EmployeeLastName", employee.EmployeeLastName);
                     cmd.Parameters.AddWithValue("@EmployeeAge", employee.EmployeeAge);
+                    cmd.Parameters.AddWithValue("@State", employee.State);
+
+                    // This is for the EmployeeContact after fix the procedure on the dataa base, the same procedure is been used to execute booth tables/options.
+
+                    cmd.Parameters.AddWithValue("@EmployeeEmail", employeeContact.EmployeeEmail);
+                    cmd.Parameters.AddWithValue("@EmployeePhone", employeeContact.EmployeePhone);
+                    cmd.Parameters.AddWithValue("@EmployeeAddress", employeeContact.EmployeeAddress);
                     
                     result = cmd.ExecuteNonQuery() > 0;
                 }
@@ -59,6 +69,7 @@ namespace Libreria.DataAccess
                         {
                             Employee employee = new Employee
                             {
+                                // Get specific data from the table
                                 Id = reader.GetInt32(reader.GetOrdinal("Id")),
                                 EmployeeName = reader.GetString(reader.GetOrdinal("EmployeeName")),
                                 EmployeeLastName = reader.GetString(reader.GetOrdinal("EmployeeLastName")),
