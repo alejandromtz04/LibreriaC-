@@ -11,8 +11,9 @@ namespace Libreria.DataAccess
 {
     public class EmployeeDal : Connection
     {
-        private static EmployeeDal _instance;
 
+        // I need to know the concept
+        private static EmployeeDal _instance;
         public static EmployeeDal Instance
         {
             get
@@ -69,12 +70,24 @@ namespace Libreria.DataAccess
                         {
                             Employee employee = new Employee
                             {
-                                // Get specific data from the table
-                                Id = reader.GetInt32(reader.GetOrdinal("Id")),
-                                EmployeeName = reader.GetString(reader.GetOrdinal("EmployeeName")),
-                                EmployeeLastName = reader.GetString(reader.GetOrdinal("EmployeeLastName")),
-                                EmployeeAge = reader.GetInt32(reader.GetOrdinal("Employee")),
+                                // Get data from Employee
+
+                                Id = Convert.ToInt32(reader["Id"]),
+                                EmployeeName = reader["EmployeeName"].ToString(),
+                                EmployeeLastName = reader["EmployeeLasName"].ToString(),
+                                EmployeeAge = Convert.ToInt32(reader["EmployeeAge"]),
+                                State = true
                             };
+
+                            // Get and save data from EmployeeContact
+                            EmployeeContact employeeContact = new EmployeeContact
+                            {
+                                EmployeeEmail = reader["EmployeeEmail"].ToString(),
+                                EmployeePhone = reader["EmployeePhone"].ToString(),
+                                EmployeeAddress = reader["EmployeeAddress"].ToString()
+                            };
+
+                            employee.EmployeeContact = employeeContact;
                             employeesList.Add(employee);
                         }
                     }
@@ -83,6 +96,8 @@ namespace Libreria.DataAccess
             return employeesList;
         }
 
+
+        // Must be fix this
         public bool UpdateEmployee(int Id)
         {
             bool result = false;
@@ -97,12 +112,17 @@ namespace Libreria.DataAccess
                     cmd.Parameters.AddWithValue("@EmployeeLastName", Id);
                     cmd.Parameters.AddWithValue("@EmployeeAge", Id);
 
+                    cmd.Parameters.AddWithValue("EmployeeEmail", Id);
+                    cmd.Parameters.AddWithValue("EmployeePhone", Id);
+                    cmd.Parameters.AddWithValue("EmployeeAddress", Id);
+
                     result = cmd.ExecuteNonQuery() > 0;
                 }
             }
             return result;
         }
 
+        // Must be fix this
         public bool DeleteEmployee(int Id)
         {
             bool result = false;

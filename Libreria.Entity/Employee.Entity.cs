@@ -15,6 +15,6 @@ namespace Libreria.Entity
         
         public bool State = true;
 
-        // add the relation with EmployeeContact
+        public EmployeeContact EmployeeContact { get; set; }
     }
 }
