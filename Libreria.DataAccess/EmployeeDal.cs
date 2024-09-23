@@ -9,16 +9,16 @@ using Libreria.Entity;
 
 namespace Libreria.DataAccess
 {
-    public class EmployeeDal : Connection
+    public class EmployeeDAL : Connection
     {
 
         // I need to know the concept
-        private static EmployeeDal _instance;
-        public static EmployeeDal Instance
+        private static EmployeeDAL _instance;
+        public static EmployeeDAL Instance
         {
             get
             {
-                return _instance ?? (_instance = new EmployeeDal());
+                return _instance ?? (_instance = new EmployeeDAL());
             }
         }
 
@@ -71,12 +71,13 @@ namespace Libreria.DataAccess
                             Employee employee = new Employee
                             {
                                 // Get data from Employee
+                                // ADD @ MAYBE
 
                                 Id = Convert.ToInt32(reader["Id"]),
                                 EmployeeName = reader["EmployeeName"].ToString(),
                                 EmployeeLastName = reader["EmployeeLasName"].ToString(),
                                 EmployeeAge = Convert.ToInt32(reader["EmployeeAge"]),
-                                State = true
+                                //State = true
                             };
 
                             // Get and save data from EmployeeContact
@@ -112,9 +113,9 @@ namespace Libreria.DataAccess
                     cmd.Parameters.AddWithValue("@EmployeeLastName", Id);
                     cmd.Parameters.AddWithValue("@EmployeeAge", Id);
 
-                    cmd.Parameters.AddWithValue("EmployeeEmail", Id);
-                    cmd.Parameters.AddWithValue("EmployeePhone", Id);
-                    cmd.Parameters.AddWithValue("EmployeeAddress", Id);
+                    cmd.Parameters.AddWithValue("@EmployeeEmail", Id);
+                    cmd.Parameters.AddWithValue("@EmployeePhone", Id);
+                    cmd.Parameters.AddWithValue("@EmployeeAddress", Id);
 
                     result = cmd.ExecuteNonQuery() > 0;
                 }
