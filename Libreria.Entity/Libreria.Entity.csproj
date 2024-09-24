@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Box.Entity.cs" />
-    <Compile Include="CategoryProduct.Entity.cs" />
+    <Compile Include="ProductCategory.cs" />
     <Compile Include="Client.Entity.cs" />
     <Compile Include="ClientContact.Entity.cs" />
     <Compile Include="Employee.Entity.cs" />
