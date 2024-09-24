@@ -12,11 +12,11 @@ namespace Libreria.Entity
         public string ProductName { get; set; }
         public string ProductCode { get; set; }
         public string ProductDescription { get; set; }
-        public string ProductPrice { get; set; }
-        public string ProductStock { get; set; }
+        public decimal ProductPrice { get; set; }
+        
 
         public bool state = true;
 
-        // Add relation with CategoryProduct
+        public ProductCategory ProductCategory { get; set; }
     }
 }

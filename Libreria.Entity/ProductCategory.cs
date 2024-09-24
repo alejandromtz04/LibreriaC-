@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Libreria.Entity
 {
-    public class CategoryProduct
+    public class ProductCategory
     {
         public int Id { get; set; }
         public string CategoryName { get; set; }
+        public string ProductStock { get; set; }
 
         public bool state = true;
     }
