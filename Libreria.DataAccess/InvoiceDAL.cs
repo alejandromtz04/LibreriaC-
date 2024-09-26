@@ -9,35 +9,35 @@ using Libreria.Entity;
 
 namespace Libreria.DataAccess
 {
-    public class SalesDAL: Connection
+    public class InvoiceDAL: Connection
     {
-        private static ProductDAL _instance = new ProductDAL();
+        private static InvoiceDAL _instance = new InvoiceDAL();
 
-        public static ProductDAL Instance
+        public static InvoiceDAL Instance
         {
             get
             {
-                return _instance ?? (_instance = new ProductDAL());
+                return _instance ?? (_instance = new InvoiceDAL());
             }
         }
 
 
-        public bool CreateSale(Sales sales, Employee employee, Client client, Product product)
+        public bool CreateSale(Invoice invoice, Employee employee, Client client, Product product)
         {
             bool result = false;
 
             using (SqlConnection _connection = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("spCreateSale", _connection))
+                using (SqlCommand cmd = new SqlCommand("spCreateInvoice", _connection))
                 {
                     _connection.Open();
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@BranchAddress", sales.BranchAddress);
-                    cmd.Parameters.AddWithValue("@SaleDescription", sales.SaleDescription);
-                    cmd.Parameters.AddWithValue("@Quantity", sales.Quantity);
-                    cmd.Parameters.AddWithValue("@Total", sales.Total);
-                    cmd.Parameters.AddWithValue("@DateAndTime", sales.DateAndTime);
+                    cmd.Parameters.AddWithValue("@BranchAddress", invoice.BranchAddress);
+                    cmd.Parameters.AddWithValue("@InvoiceDescription", invoice.InvoiceDescription);
+                    cmd.Parameters.AddWithValue("@Quantity", invoice.Quantity);
+                    cmd.Parameters.AddWithValue("@TotalAmount", invoice.TotalAmount);
+                    cmd.Parameters.AddWithValue("@InvoiceDate", invoice.InvoiceDate);
 
                     // Employee
 

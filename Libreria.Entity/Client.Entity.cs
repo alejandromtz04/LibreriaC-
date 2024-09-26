@@ -13,7 +13,7 @@ namespace Libreria.Entity
         public string ClientLastName { get; set; }
         public int ClientAge { get; set; }
 
-        public bool state = true;
+        public bool State = true;
 
         public ClientContact ClientContact { get; set; }
     }

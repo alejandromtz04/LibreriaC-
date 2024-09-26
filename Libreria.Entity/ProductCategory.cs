@@ -12,6 +12,6 @@ namespace Libreria.Entity
         public string ProductCategoryName { get; set; }
         public string ProductStock { get; set; }
 
-        public bool state = true;
+        public bool State = true;
     }
 }

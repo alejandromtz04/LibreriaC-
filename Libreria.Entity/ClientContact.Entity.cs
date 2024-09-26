@@ -13,6 +13,6 @@ namespace Libreria.Entity
         public string ClientPhone { get; set; }
         public string ClientAddress { get; set; }
 
-        public bool state = true;
+        public bool State = true;
     }
 }
