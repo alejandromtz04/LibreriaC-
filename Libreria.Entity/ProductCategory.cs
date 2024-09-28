@@ -10,7 +10,7 @@ namespace Libreria.Entity
     {
         public int Id { get; set; }
         public string ProductCategoryName { get; set; }
-        public string ProductStock { get; set; }
+        public int ProductStock { get; set; }
 
         public bool State = true;
     }

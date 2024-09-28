@@ -12,13 +12,14 @@ namespace Libreria.Entity
         public string BranchAddress { get; set; }
         public string InvoiceDescription { get; set; }
         public int Quantity { get; set; }
-        public int TotalAmount {  get; set; }
+        public decimal TotalAmount {  get; set; }
         public DateTime InvoiceDate { get; set; }
-        public string EmployeeName { get; set; }
+        public string GuestName { get; set; }
         public bool State {  get; set; }
         
         // relations
         public Employee Employee { get; set; }
+        public Client Client { get; set; }
         public Product Product { get; set; }
     }
 }
