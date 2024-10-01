@@ -47,7 +47,50 @@ namespace Libreria.DataAccess
         }
 
 
-        // ADD GET ALL METHOD
+
+        public List<Product> GetAllProducts()
+        {
+            List<Product> productsList = new List<Product>();
+
+            using (SqlConnection _connnection = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("spProductsGetAll", _connnection))
+                {
+                    _connnection.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Product product = new Product
+                            {
+                                // Get data from Product
+                                // ADD @ MAYBE
+
+                                Id = Convert.ToInt32(reader["Id"]),
+                                ProductName = reader["ProductName"].ToString(),
+                                ProductCode = reader["ProductCode"].ToString(),
+                                ProductDescription = reader["ProductDescription"].ToString(),
+                                ProductPrice = Convert.ToDecimal(reader["ProductPrice"])
+                                //State = true
+                            };
+
+                            // Get and save data from ProductCategory
+                            ProductCategory productCategory = new ProductCategory
+                            {
+                                ProductCategoryName = reader["ProductCategoryName"].ToString(),
+                                ProductStock = Convert.ToInt32(reader["ProductStock"])
+                            };
+
+                            product.ProductCategory = productCategory;
+                            productsList.Add(product);
+                        }
+                    }
+                }
+            }
+            return productsList;
+        }
 
         public bool UpdateProduct(int Id)
         {
