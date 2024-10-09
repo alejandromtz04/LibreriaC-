@@ -22,7 +22,7 @@ namespace Libreria.DataAccess
         }
 
 
-        public bool CreateSale(Invoice invoice, Employee employee, Client client, Product product)
+        public bool CreateInvoice(Invoice invoice, Employee employee, Client client, Product product)
         {
             bool result = false;
 
