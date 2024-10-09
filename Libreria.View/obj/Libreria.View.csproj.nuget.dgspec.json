@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.View\\Libreria.View.csproj": {}
+    "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.View\\Libreria.View.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.View\\Libreria.View.csproj": {
+    "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.View\\Libreria.View.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.View\\Libreria.View.csproj",
+        "projectUniqueName": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.View\\Libreria.View.csproj",
         "projectName": "Libreria.View",
-        "projectPath": "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.View\\Libreria.View.csproj",
-        "packagesPath": "C:\\Users\\Not4l\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.View\\obj\\",
+        "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.View\\Libreria.View.csproj",
+        "packagesPath": "C:\\Users\\nombr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.View\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Not4l\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nombr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
