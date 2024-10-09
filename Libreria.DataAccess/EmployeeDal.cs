@@ -99,7 +99,7 @@ namespace Libreria.DataAccess
 
 
         // Must be fix this
-        public bool UpdateEmployee(int Id)
+        public bool UpdateEmployee(Employee employee, EmployeeContact employeeContact)
         {
             bool result = false;
 
@@ -109,13 +109,15 @@ namespace Libreria.DataAccess
                 {
                     _connection.Open();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@EmployeeName", Id);
-                    cmd.Parameters.AddWithValue("@EmployeeLastName", Id);
-                    cmd.Parameters.AddWithValue("@EmployeeAge", Id);
 
-                    cmd.Parameters.AddWithValue("@EmployeeEmail", Id);
-                    cmd.Parameters.AddWithValue("@EmployeePhone", Id);
-                    cmd.Parameters.AddWithValue("@EmployeeAddress", Id);
+                    cmd.Parameters.AddWithValue("@Id", employee.Id);
+                    cmd.Parameters.AddWithValue("@EmployeeName", employee.EmployeeName);
+                    cmd.Parameters.AddWithValue("@EmployeeLastName", employee.EmployeeLastName);
+                    cmd.Parameters.AddWithValue("@EmployeeAge", employee.EmployeeAge);
+
+                    cmd.Parameters.AddWithValue("@EmployeeEmail", employeeContact.EmployeeEmail);
+                    cmd.Parameters.AddWithValue("@EmployeePhone", employeeContact.EmployeePhone);
+                    cmd.Parameters.AddWithValue("@EmployeeAddress", employeeContact.EmployeeAddress);
 
                     result = cmd.ExecuteNonQuery() > 0;
                 }

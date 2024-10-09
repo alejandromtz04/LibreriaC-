@@ -29,7 +29,7 @@ namespace Libreria.BussinessLogic
             }
             catch (Exception ex) 
             {
-                throw new Exception(ex.Message);
+                throw new Exception("Error al crear Cliente: " + ex.Message);
             }
             return Result;
         }
@@ -43,7 +43,7 @@ namespace Libreria.BussinessLogic
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception("Error al traer la lista de Cliente: " + ex.Message);
             }
             return Result;
         }
