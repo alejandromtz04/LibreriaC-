@@ -92,7 +92,7 @@ namespace Libreria.DataAccess
             return productsList;
         }
 
-        public bool UpdateProduct(int Id)
+        public bool UpdateProduct(Product product, ProductCategory productCategory)
         {
             bool result = false;
 
@@ -103,13 +103,14 @@ namespace Libreria.DataAccess
                     _connection.Open();
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@ProductName", Id);
-                    cmd.Parameters.AddWithValue("@ProductCode", Id);
-                    cmd.Parameters.AddWithValue("@ProductDescription", Id);
-                    cmd.Parameters.AddWithValue("@ProductPrice", Id);
+                    cmd.Parameters.AddWithValue("@Id", product.Id);
+                    cmd.Parameters.AddWithValue("@ProductName", product.ProductName);
+                    cmd.Parameters.AddWithValue("@ProductCode", product.ProductCode);
+                    cmd.Parameters.AddWithValue("@ProductDescription", product.ProductDescription);
+                    cmd.Parameters.AddWithValue("@ProductPrice", product.ProductPrice);
 
-                    cmd.Parameters.AddWithValue("@ProductCategoryName", Id);
-                    cmd.Parameters.AddWithValue("@ProductStock", Id);
+                    cmd.Parameters.AddWithValue("@ProductCategoryName", productCategory.ProductCategoryName);
+                    cmd.Parameters.AddWithValue("@ProductStock", productCategory.ProductStock);
 
                     result = cmd.ExecuteNonQuery() > 0;
                     //cmd.Parameters.AddWithValue("@ProductStock")
@@ -119,7 +120,7 @@ namespace Libreria.DataAccess
         }
 
 
-        public bool DeleteClient(int Id)
+        public bool DeleteProduct(int Id)
         {
             bool result = false;
 
