@@ -11,24 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria.BussinessLogic", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Libreria.View", "Libreria.View\Libreria.View.csproj", "{A8E4BFE1-B0E4-4A54-BC3C-DB112725B87D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StoredProcedures", "StoredProcedures", "{ABCFB8B1-5D07-4CF4-86CD-B0DA871DC12D}"
-	ProjectSection(SolutionItems) = preProject
-		spClientCreate.sql = spClientCreate.sql
-		spClientDelete.sql = spClientDelete.sql
-		spClientGetAll.sql = spClientGetAll.sql
-		spClientUpdate.sql = spClientUpdate.sql
-		spEmployeeCreate.sql = spEmployeeCreate.sql
-		spEmployeeDelete.sql = spEmployeeDelete.sql
-		spEmployeeGetAll.sql = spEmployeeGetAll.sql
-		spEmployeeUpdate.sql = spEmployeeUpdate.sql
-		spInovicesCreate.sql = spInovicesCreate.sql
-		spInvoicesGetAll.sql = spInvoicesGetAll.sql
-		spProductCreate.sql = spProductCreate.sql
-		spProductDelete.sql = spProductDelete.sql
-		spProductGetAll.sql = spProductGetAll.sql
-		spProductUpdate.sql = spProductUpdate.sql
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

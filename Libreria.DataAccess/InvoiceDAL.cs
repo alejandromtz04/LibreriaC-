@@ -59,5 +59,62 @@ namespace Libreria.DataAccess
             }
             return result;
         }
+
+
+        public List<Invoice> GetAllInvoices()
+        {
+            List<Invoice> invoiceList = new List<Invoice>();
+
+            using (SqlConnection _connection = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("spGetAllInvoices", _connection))
+                {
+                    _connection.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+                            Invoice invoice = new Invoice
+                            {
+                                BranchAddress = reader["BranchAddress"].ToString(),
+                                InvoiceDescription = reader["InvoiceDescription"].ToString(),
+                                Quantity = Convert.ToInt32(reader["Quantity"]),
+                                TotalAmount = Convert.ToDecimal(reader["TotalAmount"]),
+                                InvoiceDate = Convert.ToDateTime(reader["InvoiceDate"])
+                            };
+
+
+                            invoice.Employee = new Employee
+                            {
+                                EmployeeName = reader["EmployeeName"].ToString(),
+                                EmployeeLastName = reader["EmployeeLastName"].ToString()
+                            };
+
+
+                            invoice.Client = new Client
+                            {
+                                ClientName = reader["ClientName"].ToString(),
+                                ClientLastName = reader["ClientLastName"].ToString()
+                            };
+
+
+                            invoice.Product = new Product
+                            {
+                                ProductName = reader["ProductName"].ToString(),
+                                ProductPrice = Convert.ToDecimal(reader["ProductPrice"])
+                            };
+
+
+                            invoiceList.Add(invoice);
+                        }
+                    }
+                }
+            }
+            return invoiceList;
+        }
+
     }
 }
