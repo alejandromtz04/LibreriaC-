@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Libreria.View")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29552419761a883dd6b6de15a92eaf53aed29fac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e56920d653518245fa1ff7cd862858634d2aeeb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Libreria.View")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Libreria.View")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

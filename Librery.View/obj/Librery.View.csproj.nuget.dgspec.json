@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Librery.View\\Librery.View.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj",
+        "projectName": "Libreria.BussinessLogic",
+        "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.DataAccess\\Libreria.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.DataAccess\\Libreria.DataAccess.csproj"
+              },
+              "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj": {
+                "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.DataAccess\\Libreria.DataAccess.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.DataAccess\\Libreria.DataAccess.csproj",
+        "projectName": "Libreria.DataAccess",
+        "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.DataAccess\\Libreria.DataAccess.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj": {
+                "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj",
+        "projectName": "Libreria.Entity",
+        "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Librery.View\\Librery.View.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Librery.View\\Librery.View.csproj",
+        "projectName": "Librery.View",
+        "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Librery.View\\Librery.View.csproj",
+        "packagesPath": "C:\\Users\\nombr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Librery.View\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nombr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj": {
+                "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj"
+              },
+              "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj": {
+                "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

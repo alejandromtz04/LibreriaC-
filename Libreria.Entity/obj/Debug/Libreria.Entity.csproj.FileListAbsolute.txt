@@ -1,0 +1,6 @@
+C:\Users\nombr\OneDrive\Documentos\Crud\LibreriaC-\Libreria.Entity\bin\Debug\Libreria.Entity.dll
+C:\Users\nombr\OneDrive\Documentos\Crud\LibreriaC-\Libreria.Entity\bin\Debug\Libreria.Entity.pdb
+C:\Users\nombr\OneDrive\Documentos\Crud\LibreriaC-\Libreria.Entity\obj\Debug\Libreria.Entity.csproj.AssemblyReference.cache
+C:\Users\nombr\OneDrive\Documentos\Crud\LibreriaC-\Libreria.Entity\obj\Debug\Libreria.Entity.csproj.CoreCompileInputs.cache
+C:\Users\nombr\OneDrive\Documentos\Crud\LibreriaC-\Libreria.Entity\obj\Debug\Libreria.Entity.dll
+C:\Users\nombr\OneDrive\Documentos\Crud\LibreriaC-\Libreria.Entity\obj\Debug\Libreria.Entity.pdb
