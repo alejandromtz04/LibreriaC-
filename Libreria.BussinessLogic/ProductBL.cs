@@ -10,13 +10,13 @@ namespace Libreria.BussinessLogic
 {
     public class ProductBL
     {
-        private static ClientBL _instance;
+        private static ProductBL _instance;
 
-        public static ClientBL Instance
+        public static ProductBL Instance
         {
             get
             {
-                return _instance ?? (_instance = new ClientBL());
+                return _instance ?? (_instance = new ProductBL());
             }
         }
 
@@ -43,6 +43,7 @@ namespace Libreria.BussinessLogic
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 throw new Exception("Error al traer la lista de Productos: " + ex.Message);
             }
             return Result;

@@ -54,7 +54,7 @@ namespace Libreria.DataAccess
 
             using (SqlConnection _connnection = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("spProductsGetAll", _connnection))
+                using (SqlCommand cmd = new SqlCommand("spProductGetAll", _connnection))
                 {
                     _connnection.Open();
                     cmd.CommandType = CommandType.StoredProcedure;

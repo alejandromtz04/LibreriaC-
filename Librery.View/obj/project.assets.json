@@ -62,19 +62,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nombr\\.nuget\\packages\\": {}
+    "C:\\Users\\Not4l\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Librery.View\\Librery.View.csproj",
+      "projectUniqueName": "C:\\Users\\Not4l\\source\\repos\\Crud\\Librery.View\\Librery.View.csproj",
       "projectName": "Librery.View",
-      "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Librery.View\\Librery.View.csproj",
-      "packagesPath": "C:\\Users\\nombr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Librery.View\\obj\\",
+      "projectPath": "C:\\Users\\Not4l\\source\\repos\\Crud\\Librery.View\\Librery.View.csproj",
+      "packagesPath": "C:\\Users\\Not4l\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Not4l\\source\\repos\\Crud\\Librery.View\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nombr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Not4l\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -89,11 +89,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj": {
-              "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj"
+            "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj": {
+              "projectPath": "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj"
             },
-            "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj": {
-              "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj"
+            "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.Entity\\Libreria.Entity.csproj": {
+              "projectPath": "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.Entity\\Libreria.Entity.csproj"
             }
           }
         }
@@ -131,7 +131,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

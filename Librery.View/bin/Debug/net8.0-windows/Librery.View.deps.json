@@ -21,10 +21,7 @@
           "Libreria.Entity": "1.0.0"
         },
         "runtime": {
-          "Libreria.BussinessLogic.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Libreria.BussinessLogic.dll": {}
         }
       },
       "Libreria.DataAccess/1.0.0": {
@@ -32,18 +29,12 @@
           "Libreria.Entity": "1.0.0"
         },
         "runtime": {
-          "Libreria.DataAccess.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Libreria.DataAccess.dll": {}
         }
       },
       "Libreria.Entity/1.0.0": {
         "runtime": {
-          "Libreria.Entity.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Libreria.Entity.dll": {}
         }
       }
     }

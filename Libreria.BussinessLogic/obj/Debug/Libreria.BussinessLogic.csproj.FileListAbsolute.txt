@@ -9,3 +9,15 @@ C:\Users\nombr\OneDrive\Documentos\Crud\LibreriaC-\Libreria.BussinessLogic\obj\D
 C:\Users\nombr\OneDrive\Documentos\Crud\LibreriaC-\Libreria.BussinessLogic\obj\Debug\Libreria.5F4AA4B8.Up2Date
 C:\Users\nombr\OneDrive\Documentos\Crud\LibreriaC-\Libreria.BussinessLogic\obj\Debug\Libreria.BussinessLogic.dll
 C:\Users\nombr\OneDrive\Documentos\Crud\LibreriaC-\Libreria.BussinessLogic\obj\Debug\Libreria.BussinessLogic.pdb
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\bin\Debug\Libreria.BussinessLogic.dll.config
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\bin\Debug\Libreria.BussinessLogic.dll
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\bin\Debug\Libreria.BussinessLogic.pdb
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\bin\Debug\Libreria.DataAccess.dll
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\bin\Debug\Libreria.Entity.dll
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\bin\Debug\Libreria.DataAccess.pdb
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\bin\Debug\Libreria.Entity.pdb
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\obj\Debug\Libreria.BussinessLogic.csproj.AssemblyReference.cache
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\obj\Debug\Libreria.BussinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\obj\Debug\Libreria.5F4AA4B8.Up2Date
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\obj\Debug\Libreria.BussinessLogic.dll
+C:\Users\Not4l\source\repos\Crud\Libreria.BussinessLogic\obj\Debug\Libreria.BussinessLogic.pdb

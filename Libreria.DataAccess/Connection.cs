@@ -9,6 +9,7 @@ namespace Libreria.DataAccess
 {
     public class Connection
     {
-        protected string _connectionString = ConfigurationManager.ConnectionStrings["Server=ALMASZ\\SQLEXPRESS;Database=LibreriaDB;Trusted_Connection=True"].ConnectionString;
+        protected string _connectionString = ConfigurationManager.ConnectionStrings["LibreriaDB"].ConnectionString;
+
     }
 }
