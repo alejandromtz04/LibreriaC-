@@ -8,9 +8,6 @@ namespace Librery.View
 {
     public partial class Employee : Form
     {
-        EmployeeBL emp = new EmployeeBL();
-        private string id = null;
-        private bool editar = false;
 
         public Employee()
         {
@@ -24,20 +21,11 @@ namespace Librery.View
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MostrarDatos();
-        }
-
-        public void MostrarDatos()
-        {
-            EmployeeBL obj = new EmployeeBL();
-            dataGridView1.DataSource = obj.GetAllEmployees();
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
+
 
         private void edad_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -59,12 +47,17 @@ namespace Librery.View
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
-     }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }

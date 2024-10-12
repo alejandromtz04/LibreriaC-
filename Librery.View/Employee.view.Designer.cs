@@ -216,6 +216,7 @@
             button1.Size = new Size(41, 41);
             button1.TabIndex = 38;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // telefono
             // 
