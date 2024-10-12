@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria.DataAccess", "Libr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria.BussinessLogic", "Libreria.BussinessLogic\Libreria.BussinessLogic.csproj", "{4DF1426B-E4A3-45ED-9638-1BB6B06F9ADB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Librery.view", "Librery.view\Librery.view.csproj", "{D1EB70DA-3DDB-483E-83C7-D20963702E2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.view", "Librery.view\Library.view.csproj", "{D1EB70DA-3DDB-483E-83C7-D20963702E2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

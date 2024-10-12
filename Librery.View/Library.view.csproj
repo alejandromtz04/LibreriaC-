@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ProductView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ProductView.Designer.cs">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start.Designer.cs">
+      <DependentUpon>start.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ProductView.resx">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start.resx">
+      <DependentUpon>start.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +87,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libreria.BussinessLogic\Libreria.BussinessLogic.csproj">
+      <Project>{4df1426b-e4a3-45ed-9638-1bb6b06f9adb}</Project>
+      <Name>Libreria.BussinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libreria.DataAccess\Libreria.DataAccess.csproj">
+      <Project>{b33b40f5-79f3-4cce-b16f-8ba41295293f}</Project>
+      <Name>Libreria.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libreria.Entity\Libreria.Entity.csproj">
+      <Project>{3a0728e7-0ce1-4c4c-82a2-df91480aa833}</Project>
+      <Name>Libreria.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
