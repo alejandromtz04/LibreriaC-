@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Producto));
             groupBox1 = new GroupBox();
             dataGridView1 = new DataGridView();
             btnmodifiicar = new Button();
             btnagregar = new Button();
             btnnuevo = new Button();
             btnelminar = new Button();
-            edad = new TextBox();
-            email = new TextBox();
-            apellido = new TextBox();
+            categoria = new TextBox();
+            precio = new TextBox();
+            Descripcion = new TextBox();
             nombre = new TextBox();
             label6 = new Label();
             label5 = new Label();
@@ -44,7 +45,8 @@
             label3 = new Label();
             label2 = new Label();
             label7 = new Label();
-            checkBox1 = new CheckBox();
+            button1 = new Button();
+            stoc = new TextBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -70,60 +72,65 @@
             // 
             // btnmodifiicar
             // 
+            btnmodifiicar.BackgroundImage = (Image)resources.GetObject("btnmodifiicar.BackgroundImage");
+            btnmodifiicar.BackgroundImageLayout = ImageLayout.None;
             btnmodifiicar.Location = new Point(203, 342);
             btnmodifiicar.Name = "btnmodifiicar";
-            btnmodifiicar.Size = new Size(75, 23);
+            btnmodifiicar.Size = new Size(41, 41);
             btnmodifiicar.TabIndex = 36;
-            btnmodifiicar.Text = "Modificar";
             btnmodifiicar.UseVisualStyleBackColor = true;
             // 
             // btnagregar
             // 
-            btnagregar.Location = new Point(70, 342);
+            btnagregar.BackgroundImage = (Image)resources.GetObject("btnagregar.BackgroundImage");
+            btnagregar.BackgroundImageLayout = ImageLayout.None;
+            btnagregar.Location = new Point(147, 342);
             btnagregar.Name = "btnagregar";
-            btnagregar.Size = new Size(75, 23);
+            btnagregar.Size = new Size(41, 41);
             btnagregar.TabIndex = 35;
-            btnagregar.Text = "Agregar";
             btnagregar.UseVisualStyleBackColor = true;
             // 
             // btnnuevo
             // 
-            btnnuevo.Location = new Point(70, 391);
+            btnnuevo.BackgroundImage = (Image)resources.GetObject("btnnuevo.BackgroundImage");
+            btnnuevo.BackgroundImageLayout = ImageLayout.None;
+            btnnuevo.Location = new Point(147, 391);
             btnnuevo.Name = "btnnuevo";
-            btnnuevo.Size = new Size(75, 23);
+            btnnuevo.Size = new Size(41, 41);
             btnnuevo.TabIndex = 34;
-            btnnuevo.Text = "Nuevo";
             btnnuevo.UseVisualStyleBackColor = true;
             // 
             // btnelminar
             // 
+            btnelminar.BackgroundImage = (Image)resources.GetObject("btnelminar.BackgroundImage");
+            btnelminar.BackgroundImageLayout = ImageLayout.None;
             btnelminar.Location = new Point(203, 391);
             btnelminar.Name = "btnelminar";
-            btnelminar.Size = new Size(75, 23);
+            btnelminar.Size = new Size(41, 41);
             btnelminar.TabIndex = 33;
-            btnelminar.Text = "Eliminar";
             btnelminar.UseVisualStyleBackColor = true;
             // 
-            // edad
+            // categoria
             // 
-            edad.Location = new Point(147, 217);
-            edad.Name = "edad";
-            edad.Size = new Size(220, 23);
-            edad.TabIndex = 31;
+            categoria.Location = new Point(147, 217);
+            categoria.Name = "categoria";
+            categoria.Size = new Size(220, 23);
+            categoria.TabIndex = 31;
             // 
-            // email
+            // precio
             // 
-            email.Location = new Point(147, 166);
-            email.Name = "email";
-            email.Size = new Size(220, 23);
-            email.TabIndex = 30;
+            precio.Location = new Point(147, 166);
+            precio.Name = "precio";
+            precio.Size = new Size(220, 23);
+            precio.TabIndex = 30;
+            precio.KeyPress += textBox1_KeyPress;
             // 
-            // apellido
+            // Descripcion
             // 
-            apellido.Location = new Point(147, 127);
-            apellido.Name = "apellido";
-            apellido.Size = new Size(220, 23);
-            apellido.TabIndex = 29;
+            Descripcion.Location = new Point(147, 127);
+            Descripcion.Name = "Descripcion";
+            Descripcion.Size = new Size(220, 23);
+            Descripcion.TabIndex = 29;
             // 
             // nombre
             // 
@@ -135,50 +142,50 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Stencil", 14.25F);
-            label6.Location = new Point(18, 275);
+            label6.Font = new Font("Stilu", 14.25F);
+            label6.Location = new Point(18, 262);
             label6.Name = "label6";
-            label6.Size = new Size(69, 22);
+            label6.Size = new Size(61, 24);
             label6.TabIndex = 27;
             label6.Text = "Stock";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Stencil", 14.25F);
+            label5.Font = new Font("Stilu", 14.25F);
             label5.Location = new Point(18, 218);
             label5.Name = "label5";
-            label5.Size = new Size(112, 22);
+            label5.Size = new Size(98, 24);
             label5.TabIndex = 26;
             label5.Text = "Categoria";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Stencil", 14.25F);
+            label4.Font = new Font("Stilu", 14.25F);
             label4.Location = new Point(18, 164);
             label4.Name = "label4";
-            label4.Size = new Size(77, 22);
+            label4.Size = new Size(68, 24);
             label4.TabIndex = 25;
             label4.Text = "Precio";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Stencil", 14.25F);
+            label3.Font = new Font("Stilu", 14.25F);
             label3.Location = new Point(18, 125);
             label3.Name = "label3";
-            label3.Size = new Size(132, 22);
+            label3.Size = new Size(118, 24);
             label3.TabIndex = 24;
             label3.Text = "Descripcion";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Stencil", 14.25F);
+            label2.Font = new Font("Stilu", 14.25F);
             label2.Location = new Point(18, 79);
             label2.Name = "label2";
-            label2.Size = new Size(87, 22);
+            label2.Size = new Size(82, 24);
             label2.TabIndex = 23;
             label2.Text = "Nombre";
             label2.Click += label2_Click;
@@ -186,36 +193,48 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Terminator Real NFI", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Tahoma", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.Location = new Point(190, 24);
             label7.Name = "label7";
-            label7.Size = new Size(433, 21);
+            label7.Size = new Size(276, 33);
             label7.TabIndex = 22;
             label7.Text = "Registro de Productos";
             // 
-            // checkBox1
+            // button1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(147, 281);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(15, 14);
-            checkBox1.TabIndex = 38;
-            checkBox1.UseVisualStyleBackColor = true;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Location = new Point(12, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(41, 41);
+            button1.TabIndex = 39;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // stoc
+            // 
+            stoc.Location = new Point(147, 263);
+            stoc.Name = "stoc";
+            stoc.Size = new Size(220, 23);
+            stoc.TabIndex = 40;
+            stoc.KeyPress += textBox1_KeyPress;
             // 
             // Producto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(800, 450);
-            Controls.Add(checkBox1);
+            Controls.Add(stoc);
+            Controls.Add(button1);
             Controls.Add(groupBox1);
             Controls.Add(btnmodifiicar);
             Controls.Add(btnagregar);
             Controls.Add(btnnuevo);
             Controls.Add(btnelminar);
-            Controls.Add(edad);
-            Controls.Add(email);
-            Controls.Add(apellido);
+            Controls.Add(categoria);
+            Controls.Add(precio);
+            Controls.Add(Descripcion);
             Controls.Add(nombre);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -225,6 +244,7 @@
             Controls.Add(label7);
             Name = "Producto";
             Text = "Producto";
+            KeyPress += textBox1_KeyPress;
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -239,9 +259,9 @@
         private Button btnagregar;
         private Button btnnuevo;
         private Button btnelminar;
-        private TextBox edad;
-        private TextBox email;
-        private TextBox apellido;
+        private TextBox categoria;
+        private TextBox precio;
+        private TextBox Descripcion;
         private TextBox nombre;
         private Label label6;
         private Label label5;
@@ -249,6 +269,7 @@
         private Label label3;
         private Label label2;
         private Label label7;
-        private CheckBox checkBox1;
+        private Button button1;
+        private TextBox stoc;
     }
 }

@@ -58,6 +58,7 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Libreria.BussinessLogic >= 1.0.0",
+      "Libreria.DataAccess >= 1.0.0",
       "Libreria.Entity >= 1.0.0"
     ]
   },
@@ -91,6 +92,9 @@
           "projectReferences": {
             "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj": {
               "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj"
+            },
+            "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.DataAccess\\Libreria.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.DataAccess\\Libreria.DataAccess.csproj"
             },
             "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj": {
               "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj"

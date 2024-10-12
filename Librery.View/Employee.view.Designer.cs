@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
             groupBox1 = new GroupBox();
             dataGridView1 = new DataGridView();
             btnmodifiicar = new Button();
@@ -45,6 +46,9 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            button1 = new Button();
+            telefono = new TextBox();
+            lbltel = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -70,50 +74,54 @@
             // 
             // btnmodifiicar
             // 
-            btnmodifiicar.Location = new Point(203, 342);
+            btnmodifiicar.BackgroundImage = (Image)resources.GetObject("btnmodifiicar.BackgroundImage");
+            btnmodifiicar.BackgroundImageLayout = ImageLayout.None;
+            btnmodifiicar.Location = new Point(203, 333);
             btnmodifiicar.Name = "btnmodifiicar";
-            btnmodifiicar.Size = new Size(75, 23);
+            btnmodifiicar.Size = new Size(42, 40);
             btnmodifiicar.TabIndex = 36;
-            btnmodifiicar.Text = "Modificar";
             btnmodifiicar.UseVisualStyleBackColor = true;
             // 
             // btnagregar
             // 
-            btnagregar.Location = new Point(70, 342);
+            btnagregar.BackgroundImage = (Image)resources.GetObject("btnagregar.BackgroundImage");
+            btnagregar.BackgroundImageLayout = ImageLayout.None;
+            btnagregar.Location = new Point(135, 333);
             btnagregar.Name = "btnagregar";
-            btnagregar.Size = new Size(75, 23);
+            btnagregar.Size = new Size(41, 41);
             btnagregar.TabIndex = 35;
-            btnagregar.Text = "Agregar";
             btnagregar.UseVisualStyleBackColor = true;
             // 
             // btnnuevo
             // 
-            btnnuevo.Location = new Point(70, 391);
+            btnnuevo.BackgroundImage = (Image)resources.GetObject("btnnuevo.BackgroundImage");
+            btnnuevo.BackgroundImageLayout = ImageLayout.None;
+            btnnuevo.Location = new Point(135, 385);
             btnnuevo.Name = "btnnuevo";
-            btnnuevo.Size = new Size(75, 23);
+            btnnuevo.Size = new Size(41, 41);
             btnnuevo.TabIndex = 34;
-            btnnuevo.Text = "Nuevo";
             btnnuevo.UseVisualStyleBackColor = true;
             // 
             // btnelminar
             // 
-            btnelminar.Location = new Point(203, 391);
+            btnelminar.BackgroundImage = (Image)resources.GetObject("btnelminar.BackgroundImage");
+            btnelminar.BackgroundImageLayout = ImageLayout.None;
+            btnelminar.Location = new Point(203, 385);
             btnelminar.Name = "btnelminar";
-            btnelminar.Size = new Size(75, 23);
+            btnelminar.Size = new Size(41, 41);
             btnelminar.TabIndex = 33;
-            btnelminar.Text = "Eliminar";
             btnelminar.UseVisualStyleBackColor = true;
             // 
             // direccon
             // 
-            direccon.Location = new Point(147, 277);
+            direccon.Location = new Point(147, 246);
             direccon.Name = "direccon";
             direccon.Size = new Size(220, 23);
             direccon.TabIndex = 32;
             // 
             // edad
             // 
-            edad.Location = new Point(147, 217);
+            edad.Location = new Point(147, 206);
             edad.Name = "edad";
             edad.Size = new Size(220, 23);
             edad.TabIndex = 31;
@@ -142,68 +150,98 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Stencil", 14.25F);
-            label6.Location = new Point(18, 275);
+            label6.Font = new Font("Stilu", 14.25F);
+            label6.Location = new Point(18, 244);
             label6.Name = "label6";
-            label6.Size = new Size(109, 22);
+            label6.Size = new Size(97, 24);
             label6.TabIndex = 27;
             label6.Text = "Direccion";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Stencil", 14.25F);
-            label5.Location = new Point(18, 218);
+            label5.Font = new Font("Stilu", 14.25F);
+            label5.Location = new Point(18, 207);
             label5.Name = "label5";
-            label5.Size = new Size(57, 22);
+            label5.Size = new Size(56, 24);
             label5.TabIndex = 26;
             label5.Text = "edad";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Stencil", 14.25F);
+            label4.Font = new Font("Stilu", 14.25F);
             label4.Location = new Point(18, 164);
             label4.Name = "label4";
-            label4.Size = new Size(66, 22);
+            label4.Size = new Size(59, 24);
             label4.TabIndex = 25;
             label4.Text = "Email";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Stencil", 14.25F);
+            label3.Font = new Font("Stilu", 14.25F);
             label3.Location = new Point(18, 125);
             label3.Name = "label3";
-            label3.Size = new Size(97, 22);
+            label3.Size = new Size(84, 24);
             label3.TabIndex = 24;
             label3.Text = "Apellido";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Stencil", 14.25F);
+            label2.Font = new Font("Stilu", 14.25F);
             label2.Location = new Point(18, 79);
             label2.Name = "label2";
-            label2.Size = new Size(87, 22);
+            label2.Size = new Size(82, 24);
             label2.TabIndex = 23;
             label2.Text = "Nombre";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Terminator Real NFI", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(190, 24);
+            label1.Font = new Font("Tahoma", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(250, 12);
             label1.Name = "label1";
-            label1.Size = new Size(425, 21);
+            label1.Size = new Size(287, 33);
             label1.TabIndex = 22;
             label1.Text = "Registro de Empleados";
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Location = new Point(12, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(41, 41);
+            button1.TabIndex = 38;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // telefono
+            // 
+            telefono.Location = new Point(147, 285);
+            telefono.Name = "telefono";
+            telefono.Size = new Size(220, 23);
+            telefono.TabIndex = 40;
+            // 
+            // lbltel
+            // 
+            lbltel.AutoSize = true;
+            lbltel.Font = new Font("Stilu", 14.25F);
+            lbltel.Location = new Point(18, 283);
+            lbltel.Name = "lbltel";
+            lbltel.Size = new Size(85, 24);
+            lbltel.TabIndex = 39;
+            lbltel.Text = "telefono";
             // 
             // Employee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(telefono);
+            Controls.Add(lbltel);
+            Controls.Add(button1);
             Controls.Add(groupBox1);
             Controls.Add(btnmodifiicar);
             Controls.Add(btnagregar);
@@ -248,5 +286,8 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Button button1;
+        private TextBox telefono;
+        private Label lbltel;
     }
 }

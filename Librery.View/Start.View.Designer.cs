@@ -102,15 +102,16 @@
             // 
             // button5
             // 
-            button5.BackColor = Color.White;
+            button5.BackColor = Color.Transparent;
+            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
+            button5.BackgroundImageLayout = ImageLayout.None;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.Red;
-            button5.Location = new Point(173, 365);
+            button5.ForeColor = Color.Transparent;
+            button5.Location = new Point(229, 365);
             button5.Name = "button5";
-            button5.Size = new Size(155, 51);
+            button5.Size = new Size(62, 60);
             button5.TabIndex = 5;
-            button5.Text = "Salir";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
