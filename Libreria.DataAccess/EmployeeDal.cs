@@ -75,7 +75,7 @@ namespace Libreria.DataAccess
 
                                 Id = Convert.ToInt32(reader["Id"]),
                                 EmployeeName = reader["EmployeeName"].ToString(),
-                                EmployeeLastName = reader["EmployeeLasName"].ToString(),
+                                EmployeeLastName = reader["EmployeeLastName"].ToString(),
                                 EmployeeAge = Convert.ToInt32(reader["EmployeeAge"]),
                                 //State = true
                             };

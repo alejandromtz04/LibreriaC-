@@ -1,6 +1,6 @@
 ﻿namespace Librery.view
 {
-    partial class ProductView
+    partial class InvoiceView
     {
         /// <summary>
         /// Required designer variable.
@@ -35,34 +35,34 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(69, 205);
+            this.button1.Location = new System.Drawing.Point(62, 175);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 88);
+            this.button1.Size = new System.Drawing.Size(153, 60);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Volver";
+            this.button1.Text = "volver";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(385, 144);
+            this.dataGridView1.Location = new System.Drawing.Point(316, 65);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(665, 238);
+            this.dataGridView1.Size = new System.Drawing.Size(1059, 336);
             this.dataGridView1.TabIndex = 1;
             // 
-            // ProductView
+            // InvoiceView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 498);
+            this.ClientSize = new System.Drawing.Size(1424, 499);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Name = "ProductView";
-            this.Text = "ProductView";
-            this.Load += new System.EventHandler(this.ProductView_Load);
+            this.Name = "InvoiceView";
+            this.Text = "InvoiceView";
+            this.Load += new System.EventHandler(this.InvoiceView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

@@ -29,5 +29,26 @@ namespace Librery.view
             productView.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            InvoiceView invoiceView = new InvoiceView();
+            invoiceView.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ClientView clientView = new ClientView();
+            clientView.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            EmployeeView employeeView = new EmployeeView();
+            employeeView.Show();
+            this.Hide();
+        }
     }
 }

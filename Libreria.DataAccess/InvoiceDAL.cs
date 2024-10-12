@@ -33,6 +33,7 @@ namespace Libreria.DataAccess
                     _connection.Open();
                     cmd.CommandType = CommandType.StoredProcedure;
 
+
                     cmd.Parameters.AddWithValue("@BranchAddress", invoice.BranchAddress);
                     cmd.Parameters.AddWithValue("@InvoiceDescription", invoice.InvoiceDescription);
                     cmd.Parameters.AddWithValue("@Quantity", invoice.Quantity);
@@ -79,6 +80,7 @@ namespace Libreria.DataAccess
 
                             Invoice invoice = new Invoice
                             {
+                                Id = Convert.ToInt32(reader["InvoiceId"]),
                                 BranchAddress = reader["BranchAddress"].ToString(),
                                 InvoiceDescription = reader["InvoiceDescription"].ToString(),
                                 Quantity = Convert.ToInt32(reader["Quantity"]),

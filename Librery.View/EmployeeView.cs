@@ -11,16 +11,11 @@ using System.Windows.Forms;
 
 namespace Librery.view
 {
-    public partial class ProductView : Form
+    public partial class EmployeeView : Form
     {
-        public ProductView()
+        public EmployeeView()
         {
             InitializeComponent();
-        }
-
-        private void ProductView_Load(object sender, EventArgs e)
-        {
-            GetProductList();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,19 +25,21 @@ namespace Librery.view
             this.Hide();
         }
 
-        private void GetProductList()
+        private void EmployeeView_Load(object sender, EventArgs e)
+        {
+            GetListEmployees();
+        }
+
+        private void GetListEmployees()
         {
             try
             {
-                var products = ProductBL.Instance.GetAllProducts();
-
-                dataGridView1.DataSource = products;
-
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                var employee = EmployeeBL.Instance.GetAllEmployees();
+                dataGridView1.DataSource = employee;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar productos: " + ex.Message);
+                MessageBox.Show("Error al cargar la lista de Empleados: " + ex.Message);
             }
         }
     }

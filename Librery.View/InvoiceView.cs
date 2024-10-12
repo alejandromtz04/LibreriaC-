@@ -11,38 +11,36 @@ using System.Windows.Forms;
 
 namespace Librery.view
 {
-    public partial class ProductView : Form
+    public partial class InvoiceView : Form
     {
-        public ProductView()
+        public InvoiceView()
         {
             InitializeComponent();
         }
 
-        private void ProductView_Load(object sender, EventArgs e)
+        private void InvoiceView_Load(object sender, EventArgs e)
         {
-            GetProductList();
+            GetListInvoices();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             start start = new start();
             start.Show();
-            this.Hide();
+            this.Close();
         }
 
-        private void GetProductList()
+        private void GetListInvoices()
         {
             try
             {
-                var products = ProductBL.Instance.GetAllProducts();
+                var invoices = InvoiceBL.Instance.GetAllInvoices();
 
-                dataGridView1.DataSource = products;
-
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.DataSource = invoices;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar productos: " + ex.Message);
+                MessageBox.Show("Error al cargar las facturas: " + ex.Message);
             }
         }
     }

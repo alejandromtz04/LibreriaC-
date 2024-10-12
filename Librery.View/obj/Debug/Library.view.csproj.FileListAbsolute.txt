@@ -17,3 +17,6 @@ C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.exe
 C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.pdb
 C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.start.resources
 C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.ProductView.resources
+C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.EmployeeView.resources
+C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.ClientView.resources
+C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.InvoiceView.resources

@@ -11,38 +11,35 @@ using System.Windows.Forms;
 
 namespace Librery.view
 {
-    public partial class ProductView : Form
+    public partial class ClientView : Form
     {
-        public ProductView()
+        public ClientView()
         {
             InitializeComponent();
-        }
-
-        private void ProductView_Load(object sender, EventArgs e)
-        {
-            GetProductList();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             start start = new start();
             start.Show();
-            this.Hide();
+            this.Close();
         }
 
-        private void GetProductList()
+        private void ClientView_Load(object sender, EventArgs e)
+        {
+            GetListClients();
+        }
+
+        public void GetListClients()
         {
             try
             {
-                var products = ProductBL.Instance.GetAllProducts();
-
-                dataGridView1.DataSource = products;
-
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                var clients = ClientBL.Instance.GetAllClients();
+                dataGridView1.DataSource = clients;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar productos: " + ex.Message);
+                MessageBox.Show("Error al traer la lista de clientes: " + ex.Message);
             }
         }
     }
