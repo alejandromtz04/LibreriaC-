@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria.DataAccess", "Libr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria.BussinessLogic", "Libreria.BussinessLogic\Libreria.BussinessLogic.csproj", "{4DF1426B-E4A3-45ED-9638-1BB6B06F9ADB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaFrontend.View", "LibreriaFrontend.View\LibreriaFrontend.View.csproj", "{FB42DC09-1D24-4E0A-BBDF-326CA6500E24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Librery.View", "Librery.View\Librery.View.csproj", "{F5B84CF7-F1AA-4D37-AD0C-DFA1A7A75BCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{4DF1426B-E4A3-45ED-9638-1BB6B06F9ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DF1426B-E4A3-45ED-9638-1BB6B06F9ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DF1426B-E4A3-45ED-9638-1BB6B06F9ADB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB42DC09-1D24-4E0A-BBDF-326CA6500E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB42DC09-1D24-4E0A-BBDF-326CA6500E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB42DC09-1D24-4E0A-BBDF-326CA6500E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB42DC09-1D24-4E0A-BBDF-326CA6500E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B84CF7-F1AA-4D37-AD0C-DFA1A7A75BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B84CF7-F1AA-4D37-AD0C-DFA1A7A75BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B84CF7-F1AA-4D37-AD0C-DFA1A7A75BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B84CF7-F1AA-4D37-AD0C-DFA1A7A75BCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
