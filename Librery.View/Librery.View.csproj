@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Libreria.BussinessLogic\Libreria.BussinessLogic.csproj" />
+    <ProjectReference Include="..\Libreria.DataAccess\Libreria.DataAccess.csproj" />
     <ProjectReference Include="..\Libreria.Entity\Libreria.Entity.csproj" />
   </ItemGroup>
 

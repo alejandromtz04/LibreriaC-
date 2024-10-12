@@ -12,13 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Librery.View")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb6e6787aa7b64264921157968c597f31f4a9dcc")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c6aa9b895dd1e2d51bd403615d04556be0530ea")]
->>>>>>> 5673a18f2b4901f95c9c78a79b8c0fea50cb211b
 [assembly: System.Reflection.AssemblyProductAttribute("Librery.View")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Librery.View")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

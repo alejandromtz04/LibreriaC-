@@ -26,6 +26,7 @@ namespace Librery.View
 
         }
 
+<<<<<<< HEAD
         private void nombre_TextChanged(object sender, EventArgs e)
         {
 
@@ -48,6 +49,28 @@ namespace Librery.View
             catch (Exception ex)
             {
                 MessageBox.Show("error al cargar productos: " + ex.Message);
+=======
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void email_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+>>>>>>> 5673a18f2b4901f95c9c78a79b8c0fea50cb211b
             }
         }
     }

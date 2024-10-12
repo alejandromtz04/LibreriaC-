@@ -9,6 +9,7 @@
       "Librery.View/1.0.0": {
         "dependencies": {
           "Libreria.BussinessLogic": "1.0.0",
+          "Libreria.DataAccess": "1.0.0",
           "Libreria.Entity": "1.0.0"
         },
         "runtime": {

@@ -28,84 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Client));
             label1 = new Label();
             nombre = new TextBox();
             apellido = new TextBox();
             email = new TextBox();
             edad = new TextBox();
-            direccon = new TextBox();
-            btnelminar = new Button();
-            btnnuevo = new Button();
-            btnagregar = new Button();
-            btnmodifiicar = new Button();
+            direccion = new TextBox();
             groupBox1 = new GroupBox();
             dataGridView1 = new DataGridView();
+            button1 = new Button();
+            btnmodifiicar = new Button();
+            btnagregar = new Button();
+            btnnuevo = new Button();
+            btnelminar = new Button();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Stencil", 14.25F);
-            label6.Location = new Point(23, 269);
-            label6.Name = "label6";
-            label6.Size = new Size(109, 22);
-            label6.TabIndex = 11;
-            label6.Text = "Direccion";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Stencil", 14.25F);
-            label5.Location = new Point(23, 212);
-            label5.Name = "label5";
-            label5.Size = new Size(57, 22);
-            label5.TabIndex = 10;
-            label5.Text = "edad";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Stencil", 14.25F);
-            label4.Location = new Point(23, 158);
-            label4.Name = "label4";
-            label4.Size = new Size(66, 22);
-            label4.TabIndex = 9;
-            label4.Text = "Email";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Stencil", 14.25F);
-            label3.Location = new Point(23, 119);
-            label3.Name = "label3";
-            label3.Size = new Size(97, 22);
-            label3.TabIndex = 8;
-            label3.Text = "Apellido";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Stencil", 14.25F);
-            label2.Location = new Point(23, 73);
-            label2.Name = "label2";
-            label2.Size = new Size(87, 22);
-            label2.TabIndex = 7;
-            label2.Text = "Nombre";
-            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Terminator Real NFI", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(195, 18);
+            label1.Font = new Font("Tahoma", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(257, 12);
             label1.Name = "label1";
-            label1.Size = new Size(387, 21);
+            label1.Size = new Size(250, 33);
             label1.TabIndex = 6;
             label1.Text = "Registro de Clientes";
             // 
@@ -115,6 +67,7 @@
             nombre.Name = "nombre";
             nombre.Size = new Size(220, 23);
             nombre.TabIndex = 12;
+            nombre.KeyPress += direccon_KeyPress;
             // 
             // apellido
             // 
@@ -122,6 +75,7 @@
             apellido.Name = "apellido";
             apellido.Size = new Size(220, 23);
             apellido.TabIndex = 13;
+            apellido.KeyPress += direccon_KeyPress;
             // 
             // email
             // 
@@ -129,56 +83,24 @@
             email.Name = "email";
             email.Size = new Size(220, 23);
             email.TabIndex = 14;
+            email.KeyPress += direccon_KeyPress;
             // 
             // edad
             // 
             edad.Location = new Point(152, 211);
+            edad.MaxLength = 3;
             edad.Name = "edad";
             edad.Size = new Size(220, 23);
             edad.TabIndex = 15;
+            edad.KeyPress += edad_KeyPress;
             // 
-            // direccon
+            // direccion
             // 
-            direccon.Location = new Point(152, 271);
-            direccon.Name = "direccon";
-            direccon.Size = new Size(220, 23);
-            direccon.TabIndex = 16;
-            // 
-            // btnelminar
-            // 
-            btnelminar.Location = new Point(208, 385);
-            btnelminar.Name = "btnelminar";
-            btnelminar.Size = new Size(75, 23);
-            btnelminar.TabIndex = 17;
-            btnelminar.Text = "Eliminar";
-            btnelminar.UseVisualStyleBackColor = true;
-            // 
-            // btnnuevo
-            // 
-            btnnuevo.Location = new Point(75, 385);
-            btnnuevo.Name = "btnnuevo";
-            btnnuevo.Size = new Size(75, 23);
-            btnnuevo.TabIndex = 18;
-            btnnuevo.Text = "Nuevo";
-            btnnuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnagregar
-            // 
-            btnagregar.Location = new Point(75, 336);
-            btnagregar.Name = "btnagregar";
-            btnagregar.Size = new Size(75, 23);
-            btnagregar.TabIndex = 19;
-            btnagregar.Text = "Agregar";
-            btnagregar.UseVisualStyleBackColor = true;
-            // 
-            // btnmodifiicar
-            // 
-            btnmodifiicar.Location = new Point(208, 336);
-            btnmodifiicar.Name = "btnmodifiicar";
-            btnmodifiicar.Size = new Size(75, 23);
-            btnmodifiicar.TabIndex = 20;
-            btnmodifiicar.Text = "Modificar";
-            btnmodifiicar.UseVisualStyleBackColor = true;
+            direccion.Location = new Point(152, 259);
+            direccion.Name = "direccion";
+            direccion.Size = new Size(220, 23);
+            direccion.TabIndex = 16;
+            direccion.KeyPress += direccon_KeyPress;
             // 
             // groupBox1
             // 
@@ -199,27 +121,129 @@
             dataGridView1.Size = new Size(353, 313);
             dataGridView1.TabIndex = 0;
             // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Location = new Point(12, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(41, 41);
+            button1.TabIndex = 39;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // btnmodifiicar
+            // 
+            btnmodifiicar.BackgroundImage = (Image)resources.GetObject("btnmodifiicar.BackgroundImage");
+            btnmodifiicar.BackgroundImageLayout = ImageLayout.None;
+            btnmodifiicar.Location = new Point(210, 323);
+            btnmodifiicar.Name = "btnmodifiicar";
+            btnmodifiicar.Size = new Size(42, 40);
+            btnmodifiicar.TabIndex = 43;
+            btnmodifiicar.UseVisualStyleBackColor = true;
+            // 
+            // btnagregar
+            // 
+            btnagregar.BackgroundImage = (Image)resources.GetObject("btnagregar.BackgroundImage");
+            btnagregar.BackgroundImageLayout = ImageLayout.None;
+            btnagregar.Location = new Point(142, 323);
+            btnagregar.Name = "btnagregar";
+            btnagregar.Size = new Size(41, 41);
+            btnagregar.TabIndex = 42;
+            btnagregar.UseVisualStyleBackColor = true;
+            // 
+            // btnnuevo
+            // 
+            btnnuevo.BackgroundImage = (Image)resources.GetObject("btnnuevo.BackgroundImage");
+            btnnuevo.BackgroundImageLayout = ImageLayout.None;
+            btnnuevo.Location = new Point(142, 375);
+            btnnuevo.Name = "btnnuevo";
+            btnnuevo.Size = new Size(41, 41);
+            btnnuevo.TabIndex = 41;
+            btnnuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnelminar
+            // 
+            btnelminar.BackgroundImage = (Image)resources.GetObject("btnelminar.BackgroundImage");
+            btnelminar.BackgroundImageLayout = ImageLayout.None;
+            btnelminar.Location = new Point(210, 375);
+            btnelminar.Name = "btnelminar";
+            btnelminar.Size = new Size(41, 41);
+            btnelminar.TabIndex = 40;
+            btnelminar.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Stilu", 14.25F);
+            label6.Location = new Point(12, 257);
+            label6.Name = "label6";
+            label6.Size = new Size(97, 24);
+            label6.TabIndex = 48;
+            label6.Text = "Direccion";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Stilu", 14.25F);
+            label5.Location = new Point(12, 212);
+            label5.Name = "label5";
+            label5.Size = new Size(56, 24);
+            label5.TabIndex = 47;
+            label5.Text = "edad";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Stilu", 14.25F);
+            label4.Location = new Point(12, 158);
+            label4.Name = "label4";
+            label4.Size = new Size(59, 24);
+            label4.TabIndex = 46;
+            label4.Text = "Email";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Stilu", 14.25F);
+            label3.Location = new Point(12, 119);
+            label3.Name = "label3";
+            label3.Size = new Size(84, 24);
+            label3.TabIndex = 45;
+            label3.Text = "Apellido";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Stilu", 14.25F);
+            label2.Location = new Point(12, 73);
+            label2.Name = "label2";
+            label2.Size = new Size(82, 24);
+            label2.TabIndex = 44;
+            label2.Text = "Nombre";
+            // 
             // Client
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(800, 450);
-            Controls.Add(groupBox1);
-            Controls.Add(btnmodifiicar);
-            Controls.Add(btnagregar);
-            Controls.Add(btnnuevo);
-            Controls.Add(btnelminar);
-            Controls.Add(direccon);
-            Controls.Add(edad);
-            Controls.Add(email);
-            Controls.Add(apellido);
-            Controls.Add(nombre);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
+            Controls.Add(btnmodifiicar);
+            Controls.Add(btnagregar);
+            Controls.Add(btnnuevo);
+            Controls.Add(btnelminar);
+            Controls.Add(button1);
+            Controls.Add(groupBox1);
+            Controls.Add(direccion);
+            Controls.Add(edad);
+            Controls.Add(email);
+            Controls.Add(apellido);
+            Controls.Add(nombre);
             Controls.Add(label1);
             Name = "Client";
             Text = "Client";
@@ -230,23 +254,23 @@
         }
 
         #endregion
-
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
         private Label label1;
         private TextBox nombre;
         private TextBox apellido;
         private TextBox email;
         private TextBox edad;
-        private TextBox direccon;
-        private Button btnelminar;
-        private Button btnnuevo;
-        private Button btnagregar;
-        private Button btnmodifiicar;
+        private TextBox direccion;
         private GroupBox groupBox1;
         private DataGridView dataGridView1;
+        private Button button1;
+        private Button btnmodifiicar;
+        private Button btnagregar;
+        private Button btnnuevo;
+        private Button btnelminar;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
     }
 }

@@ -88,8 +88,16 @@
               "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj": {
                 "projectPath": "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.BussinessLogic\\Libreria.BussinessLogic.csproj"
               },
+<<<<<<< HEAD
               "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.Entity\\Libreria.Entity.csproj": {
                 "projectPath": "C:\\Users\\Not4l\\source\\repos\\Crud\\Libreria.Entity\\Libreria.Entity.csproj"
+=======
+              "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.DataAccess\\Libreria.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.DataAccess\\Libreria.DataAccess.csproj"
+              },
+              "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj": {
+                "projectPath": "C:\\Users\\nombr\\OneDrive\\Documentos\\Crud\\LibreriaC-\\Libreria.Entity\\Libreria.Entity.csproj"
+>>>>>>> 5673a18f2b4901f95c9c78a79b8c0fea50cb211b
               }
             }
           }
