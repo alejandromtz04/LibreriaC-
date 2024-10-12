@@ -20,3 +20,4 @@ C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.ProductView
 C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.EmployeeView.resources
 C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.ClientView.resources
 C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.InvoiceView.resources
+C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.ClientCreateView.resources

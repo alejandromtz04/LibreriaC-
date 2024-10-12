@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnClientCreate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,6 +38,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtClientName = new System.Windows.Forms.TextBox();
             this.txtClientLastName = new System.Windows.Forms.TextBox();
+            this.txtClientAge = new System.Windows.Forms.TextBox();
+            this.txtClientEmail = new System.Windows.Forms.TextBox();
+            this.txtClientPhone = new System.Windows.Forms.TextBox();
+            this.txtClientAddress = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -48,15 +52,17 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "volver a productos";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnClientCreate
             // 
-            this.button2.Location = new System.Drawing.Point(461, 452);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Crear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnClientCreate.Location = new System.Drawing.Point(461, 452);
+            this.btnClientCreate.Name = "btnClientCreate";
+            this.btnClientCreate.Size = new System.Drawing.Size(149, 38);
+            this.btnClientCreate.TabIndex = 1;
+            this.btnClientCreate.Text = "Crear";
+            this.btnClientCreate.UseVisualStyleBackColor = true;
+            this.btnClientCreate.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -125,14 +131,46 @@
             // 
             this.txtClientLastName.Location = new System.Drawing.Point(348, 120);
             this.txtClientLastName.Name = "txtClientLastName";
-            this.txtClientLastName.Size = new System.Drawing.Size(100, 22);
+            this.txtClientLastName.Size = new System.Drawing.Size(248, 22);
             this.txtClientLastName.TabIndex = 9;
+            // 
+            // txtClientAge
+            // 
+            this.txtClientAge.Location = new System.Drawing.Point(348, 194);
+            this.txtClientAge.Name = "txtClientAge";
+            this.txtClientAge.Size = new System.Drawing.Size(248, 22);
+            this.txtClientAge.TabIndex = 10;
+            // 
+            // txtClientEmail
+            // 
+            this.txtClientEmail.Location = new System.Drawing.Point(348, 260);
+            this.txtClientEmail.Name = "txtClientEmail";
+            this.txtClientEmail.Size = new System.Drawing.Size(248, 22);
+            this.txtClientEmail.TabIndex = 11;
+            // 
+            // txtClientPhone
+            // 
+            this.txtClientPhone.Location = new System.Drawing.Point(348, 317);
+            this.txtClientPhone.Name = "txtClientPhone";
+            this.txtClientPhone.Size = new System.Drawing.Size(248, 22);
+            this.txtClientPhone.TabIndex = 12;
+            // 
+            // txtClientAddress
+            // 
+            this.txtClientAddress.Location = new System.Drawing.Point(348, 382);
+            this.txtClientAddress.Name = "txtClientAddress";
+            this.txtClientAddress.Size = new System.Drawing.Size(248, 22);
+            this.txtClientAddress.TabIndex = 13;
             // 
             // ClientCreateView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 558);
+            this.Controls.Add(this.txtClientAddress);
+            this.Controls.Add(this.txtClientPhone);
+            this.Controls.Add(this.txtClientEmail);
+            this.Controls.Add(this.txtClientAge);
             this.Controls.Add(this.txtClientLastName);
             this.Controls.Add(this.txtClientName);
             this.Controls.Add(this.label6);
@@ -141,10 +179,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnClientCreate);
             this.Controls.Add(this.button1);
             this.Name = "ClientCreateView";
             this.Text = "ClientCreateView";
+            this.Load += new System.EventHandler(this.ClientCreateView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,7 +192,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnClientCreate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -162,5 +201,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtClientName;
         private System.Windows.Forms.TextBox txtClientLastName;
+        private System.Windows.Forms.TextBox txtClientAge;
+        private System.Windows.Forms.TextBox txtClientEmail;
+        private System.Windows.Forms.TextBox txtClientPhone;
+        private System.Windows.Forms.TextBox txtClientAddress;
     }
 }

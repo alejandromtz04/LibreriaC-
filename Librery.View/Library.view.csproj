@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientCreateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCreateView.Designer.cs">
+      <DependentUpon>ClientCreateView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClientCreateView.resx">
+      <DependentUpon>ClientCreateView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientView.resx">
       <DependentUpon>ClientView.cs</DependentUpon>
     </EmbeddedResource>

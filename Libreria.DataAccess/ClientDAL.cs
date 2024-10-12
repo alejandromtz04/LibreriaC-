@@ -37,10 +37,12 @@ namespace Libreria.DataAccess
                     cmd.Parameters.AddWithValue("@ClientName", client.ClientName);
                     cmd.Parameters.AddWithValue("@ClientLastName", client.ClientLastName);
                     cmd.Parameters.AddWithValue("@ClientAge", client.ClientAge);
+                    cmd.Parameters.AddWithValue("@State", client.State);
 
                     cmd.Parameters.AddWithValue("@ClientEmail", clientContact.ClientEmail);
                     cmd.Parameters.AddWithValue("@ClientPhone", clientContact.ClientPhone);
                     cmd.Parameters.AddWithValue("@ClientAddress", clientContact.ClientAddress);
+                    //cmd.Parameters.AddWithValue("@State", clientContact.State);
 
                     result = cmd.ExecuteNonQuery() > 0;
                 }

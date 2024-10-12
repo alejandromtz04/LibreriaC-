@@ -42,5 +42,12 @@ namespace Librery.view
                 MessageBox.Show("Error al traer la lista de clientes: " + ex.Message);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ClientCreateView clientCreateView = new ClientCreateView();
+            clientCreateView.Show();
+            this.Hide();
+        }
     }
 }
