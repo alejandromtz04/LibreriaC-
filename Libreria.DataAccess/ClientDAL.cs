@@ -110,7 +110,7 @@ namespace Libreria.DataAccess
                     cmd.Parameters.AddWithValue("@Id", client.Id);
                     cmd.Parameters.AddWithValue("@ClientName", client.ClientName);
                     cmd.Parameters.AddWithValue("@ClientLastName", client.ClientLastName);
-                    cmd.Parameters.AddWithValue("@ClientAge", client.ClientLastName);
+                    cmd.Parameters.AddWithValue("@ClientAge", client.ClientAge);
 
                     cmd.Parameters.AddWithValue("@ClientEmail", clientContact.ClientEmail);
                     cmd.Parameters.AddWithValue("@ClientPhone", clientContact.ClientPhone);

@@ -1,4 +1,5 @@
 ﻿using Libreria.BussinessLogic;
+using Libreria.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,8 @@ namespace Librery.view
             GetListClients();
         }
 
+
+        // GET CLIENTS LIST
         public void GetListClients()
         {
             try
@@ -43,11 +46,42 @@ namespace Librery.view
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)  // Create
         {
             ClientCreateView clientCreateView = new ClientCreateView();
             clientCreateView.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)  // Modify
+        {
+            //ClientModifyView clientModifyView = new ClientModifyView();
+            //clientModifyView.Show();
+            //this.Hide();
+        }
+
+        // SELECT A REGISTER TO BE MODIFIED
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                var selectClient = (Client)dataGridView1.SelectedRows[0].DataBoundItem;
+
+                var selectClientContact = new ClientContact
+                {
+                    ClientEmail = dataGridView1.SelectedRows[0].Cells["ClientEmail"].Value.ToString(),
+                    ClientPhone = dataGridView1.SelectedRows[0].Cells["ClientPhone"].Value.ToString(),
+                    ClientAddress = dataGridView1.SelectedRows[0].Cells["ClientAddress"].Value.ToString()
+
+                };
+
+                ClientModifyView clientModifyView = new ClientModifyView(selectClient, selectClientContact);
+                this.Hide();
+                clientModifyView.ShowDialog();
+
+                GetListClients();
+
+            }
         }
     }
 }
