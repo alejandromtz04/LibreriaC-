@@ -45,7 +45,9 @@ namespace Librery.view
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-
+            EmployeeCreateView employeeCreateView = new EmployeeCreateView();
+            employeeCreateView.Show();
+            this.Hide();
         }
     }
 }
