@@ -76,6 +76,12 @@
     <Compile Include="InvoiceView.Designer.cs">
       <DependentUpon>InvoiceView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductCreateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCreateView.Designer.cs">
+      <DependentUpon>ProductCreateView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InvoiceView.resx">
       <DependentUpon>InvoiceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCreateView.resx">
+      <DependentUpon>ProductCreateView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductView.resx">
       <DependentUpon>ProductView.cs</DependentUpon>

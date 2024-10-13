@@ -42,5 +42,10 @@ namespace Librery.view
                 MessageBox.Show("Error al cargar la lista de Empleados: " + ex.Message);
             }
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

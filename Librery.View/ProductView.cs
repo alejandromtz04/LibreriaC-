@@ -45,5 +45,12 @@ namespace Librery.view
                 MessageBox.Show("Error al cargar productos: " + ex.Message);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProductCreateView productCreateView = new ProductCreateView();
+            productCreateView.Show();
+            this.Hide();
+        }
     }
 }
