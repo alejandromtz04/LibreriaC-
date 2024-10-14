@@ -24,3 +24,4 @@ C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.ClientCreat
 C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.ClientModifyView.resources
 C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.ProductCreateView.resources
 C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.EmployeeCreateView.resources
+C:\Users\Not4l\source\repos\Crud\Librery.view\obj\Debug\Librery.view.InvoiceCreateView.resources

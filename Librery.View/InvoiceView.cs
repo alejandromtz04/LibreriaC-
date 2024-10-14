@@ -43,5 +43,12 @@ namespace Librery.view
                 MessageBox.Show("Error al cargar las facturas: " + ex.Message);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            InvoiceCreateView invoiceCreateView = new InvoiceCreateView();
+            invoiceCreateView.Show();
+            this.Hide();
+        }
     }
 }

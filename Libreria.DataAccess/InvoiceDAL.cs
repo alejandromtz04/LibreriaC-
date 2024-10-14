@@ -43,17 +43,16 @@ namespace Libreria.DataAccess
                     // Employee
 
                     cmd.Parameters.AddWithValue("@EmployeeName", employee.EmployeeName);
-                    cmd.Parameters.AddWithValue("@EmployeeLastName", employee.EmployeeLastName);
 
                     // Client
 
-                    cmd.Parameters.AddWithValue("@ClientName", client.ClientName);
-                    cmd.Parameters.AddWithValue("@ClientLastName", client.ClientLastName);
-
+                    cmd.Parameters.AddWithValue("@ClientName", client.ClientName ?? (object)DBNull.Value);
                     // Product
 
                     cmd.Parameters.AddWithValue("@ProductName", product.ProductName);
-                    cmd.Parameters.AddWithValue("@ProductPrice", product.ProductPrice);
+                    //cmd.Parameters.AddWithValue("@ProductPrice", product.ProductPrice);
+
+                    cmd.Parameters.AddWithValue("@GuestName", invoice.GuestName ?? (object)DBNull.Value);
 
                     result = cmd.ExecuteNonQuery() > 0;
                 }
@@ -85,7 +84,8 @@ namespace Libreria.DataAccess
                                 InvoiceDescription = reader["InvoiceDescription"].ToString(),
                                 Quantity = Convert.ToInt32(reader["Quantity"]),
                                 TotalAmount = Convert.ToDecimal(reader["TotalAmount"]),
-                                InvoiceDate = Convert.ToDateTime(reader["InvoiceDate"])
+                                InvoiceDate = Convert.ToDateTime(reader["InvoiceDate"]),
+                                GuestName = reader["GuestName"].ToString()
                             };
 
 
