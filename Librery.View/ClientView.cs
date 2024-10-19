@@ -28,6 +28,7 @@ namespace Librery.view
 
         private void ClientView_Load(object sender, EventArgs e)
         {
+            btnModifyClient.Enabled = false;
             GetListClients();
         }
 
@@ -38,7 +39,32 @@ namespace Librery.view
             try
             {
                 var clients = ClientBL.Instance.GetAllClients();
-                dataGridView1.DataSource = clients;
+                //dataGridView1.DataSource = clients;
+
+                dataGridView1.Rows.Clear();
+                dataGridView1.Columns.Clear();
+
+                dataGridView1.Columns.Add("Id", "Id");
+                dataGridView1.Columns.Add("ClientName", "ClientName");
+                dataGridView1.Columns.Add("ClientlastName", "ClientLastName");
+                dataGridView1.Columns.Add("ClientAge", "ClientAge");
+
+                dataGridView1.Columns.Add("ClientEmail", "ClientEmail");
+                dataGridView1.Columns.Add("ClientPhone", "ClientPhone");
+                dataGridView1.Columns.Add("ClientAddress", "ClientAddress");
+
+                foreach (var client in clients)
+                {
+                    dataGridView1.Rows.Add(
+                            client.Id,
+                            client.ClientName,
+                            client.ClientLastName,
+                            client.ClientAge,
+                            client.ClientContact?.ClientEmail ?? "",
+                            client.ClientContact?.ClientPhone ?? "",
+                            client.ClientContact?.ClientAddress ?? ""
+                        );
+                }
             }
             catch (Exception ex)
             {

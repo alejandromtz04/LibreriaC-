@@ -56,26 +56,7 @@ namespace Librery.view
 
         private void button2_Click(object sender, EventArgs e) // SAVE CHANGES
         {
-            _client.ClientName = txtUpdateClientName.Text;
-            _client.ClientLastName = txtUpdateClientLastName.Text;
-            _client.ClientAge = int.Parse(txtUpdateClientAge.Text);
-
-            _clientContact.ClientEmail = txtUpdateClientEmail.Text;
-            _clientContact.ClientPhone = txtUpdateClientPhone.Text;
-            _clientContact.ClientAddress = txtUpdateClientAddress.Text;
-
-            bool result = ClientBL.Instance.UpdateClient(_client, _clientContact);
-
-            if (result)
-            {
-                MessageBox.Show("Client actualizado exitosamente.");
-            }
-            else
-            {
-                MessageBox.Show("Error al actualizar cliente.");
-            }
-            this.Close();
-            
+           
         }
     }
 }
