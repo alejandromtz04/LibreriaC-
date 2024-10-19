@@ -96,7 +96,7 @@ namespace Libreria.DataAccess
         }
 
 
-        public bool UpdateClient(Client client, ClientContact clientContact)
+        public bool UpdateClient(Client client)
         {
             bool result = false;
 
@@ -112,9 +112,9 @@ namespace Libreria.DataAccess
                     cmd.Parameters.AddWithValue("@ClientLastName", client.ClientLastName);
                     cmd.Parameters.AddWithValue("@ClientAge", client.ClientAge);
 
-                    cmd.Parameters.AddWithValue("@ClientEmail", clientContact.ClientEmail);
-                    cmd.Parameters.AddWithValue("@ClientPhone", clientContact.ClientPhone);
-                    cmd.Parameters.AddWithValue("@ClientAddress", clientContact.ClientAddress);
+                    cmd.Parameters.AddWithValue("@ClientEmail", client.ClientContact.ClientEmail);
+                    cmd.Parameters.AddWithValue("@ClientPhone", client.ClientContact.ClientPhone);
+                    cmd.Parameters.AddWithValue("@ClientAddress", client.ClientContact.ClientAddress);
 
                     result = cmd.ExecuteNonQuery() > 0;
                 }

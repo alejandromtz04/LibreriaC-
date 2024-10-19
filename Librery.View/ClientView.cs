@@ -81,33 +81,44 @@ namespace Librery.view
 
         private void button3_Click(object sender, EventArgs e)  // Modify
         {
-            //ClientModifyView clientModifyView = new ClientModifyView();
-            //clientModifyView.Show();
-            //this.Hide();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                var selectedRow = dataGridView1.SelectedRows[0];
+
+                int clientId = (int)selectedRow.Cells["Id"].Value;
+                string clientName = (string)selectedRow.Cells["ClientName"].Value;
+                string clientLastName = (string)selectedRow.Cells["ClientLastName"].Value;
+                int clientAge = (int)selectedRow.Cells["ClientAge"].Value;
+                string clientEmail = (string)selectedRow.Cells["ClientEmail"].Value;
+                string clientPhone = (string)selectedRow.Cells["ClientPhone"].Value;
+                string clientAddress = (string)selectedRow.Cells["ClientAddress"].Value;
+
+                ClientModifyView clientModifyView = new ClientModifyView(clientId, clientName, clientLastName, clientAge, clientEmail, clientPhone, clientAddress);
+                
+
+                if (clientModifyView.ShowDialog() == DialogResult.OK)
+                {
+                    GetListClients();
+                }
+            }
+            this.Hide();
         }
 
         // SELECT A REGISTER TO BE MODIFIED
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                var selectClient = (Client)dataGridView1.SelectedRows[0].DataBoundItem;
-
-                var selectClientContact = new ClientContact
-                {
-                    ClientEmail = dataGridView1.SelectedRows[0].Cells["ClientEmail"].Value.ToString(),
-                    ClientPhone = dataGridView1.SelectedRows[0].Cells["ClientPhone"].Value.ToString(),
-                    ClientAddress = dataGridView1.SelectedRows[0].Cells["ClientAddress"].Value.ToString()
-
-                };
-
-                ClientModifyView clientModifyView = new ClientModifyView(selectClient, selectClientContact);
-                this.Hide();
-                clientModifyView.ShowDialog();
-
-                GetListClients();
-
+                btnModifyClient.Enabled = true;
+            } else
+            {
+                btnModifyClient.Enabled = false;
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
