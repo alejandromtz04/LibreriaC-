@@ -36,9 +36,31 @@ namespace Librery.view
             {
                 var products = ProductBL.Instance.GetAllProducts();
 
-                dataGridView1.DataSource = products;
+                dataGridView1.Rows.Clear();
+                dataGridView1.Columns.Clear();
 
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.Columns.Add("Id", "Numero");
+                dataGridView1.Columns.Add("ProductName", "Nombre del Producto");
+                dataGridView1.Columns.Add("ProductCode", "Codigo");
+                dataGridView1.Columns.Add("ProductDescription", "Descripcion");
+                dataGridView1.Columns.Add("ProductPrice", "Precio");
+
+                dataGridView1.Columns.Add("ProductCategoryName", "Categoria");
+                dataGridView1.Columns.Add("ProductStock", "Existencias");
+
+                foreach(var product in products)
+                {
+                    dataGridView1.Rows.Add(
+                            product.Id,
+                            product.ProductName,
+                            product.ProductCode,
+                            product.ProductDescription,
+                            product.ProductPrice,
+                            product.ProductCategory?.ProductCategoryName ?? "",
+                            product.ProductCategory?.ProductStock ?? null
+                        );
+                }
+
             }
             catch (Exception ex)
             {

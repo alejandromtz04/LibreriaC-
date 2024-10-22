@@ -44,14 +44,14 @@ namespace Librery.view
                 dataGridView1.Rows.Clear();
                 dataGridView1.Columns.Clear();
 
-                dataGridView1.Columns.Add("Id", "Id");
-                dataGridView1.Columns.Add("ClientName", "ClientName");
-                dataGridView1.Columns.Add("ClientlastName", "ClientLastName");
-                dataGridView1.Columns.Add("ClientAge", "ClientAge");
+                dataGridView1.Columns.Add("Id", "Numero");
+                dataGridView1.Columns.Add("ClientName", "Nombre");
+                dataGridView1.Columns.Add("ClientlastName", "Apellido");
+                dataGridView1.Columns.Add("ClientAge", "Edad");
 
-                dataGridView1.Columns.Add("ClientEmail", "ClientEmail");
-                dataGridView1.Columns.Add("ClientPhone", "ClientPhone");
-                dataGridView1.Columns.Add("ClientAddress", "ClientAddress");
+                dataGridView1.Columns.Add("ClientEmail", "Email");
+                dataGridView1.Columns.Add("ClientPhone", "Telefono");
+                dataGridView1.Columns.Add("ClientAddress", "Direccion");
 
                 foreach (var client in clients)
                 {

@@ -36,9 +36,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(58, 248);
+            this.button1.Location = new System.Drawing.Point(124, 58);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 75);
+            this.button1.Size = new System.Drawing.Size(179, 63);
             this.button1.TabIndex = 0;
             this.button1.Text = "volver";
             this.button1.UseVisualStyleBackColor = true;
@@ -47,18 +47,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(317, 112);
+            this.dataGridView1.Location = new System.Drawing.Point(124, 179);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(430, 239);
+            this.dataGridView1.Size = new System.Drawing.Size(991, 240);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(67, 112);
+            this.btnCreate.Location = new System.Drawing.Point(370, 58);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(118, 52);
+            this.btnCreate.Size = new System.Drawing.Size(180, 63);
             this.btnCreate.TabIndex = 2;
             this.btnCreate.Text = "Nuevo registro";
             this.btnCreate.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1288, 516);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);

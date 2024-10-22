@@ -34,8 +34,32 @@ namespace Librery.view
         {
             try
             {
-                var employee = EmployeeBL.Instance.GetAllEmployees();
-                dataGridView1.DataSource = employee;
+                var employees = EmployeeBL.Instance.GetAllEmployees();
+
+                dataGridView1.Rows.Clear();
+                dataGridView1.Columns.Clear();
+
+                dataGridView1.Columns.Add("Id", "Numero");
+                dataGridView1.Columns.Add("EmployeeName", "Nombre");
+                dataGridView1.Columns.Add("EmployeeLastName", "Apellido");
+                dataGridView1.Columns.Add("EmployeeAge", "Edad");
+                dataGridView1.Columns.Add("EmployeeEmail", "Email");
+                dataGridView1.Columns.Add("EmployeePhone", "telefono");
+                dataGridView1.Columns.Add("EmployeeAddress", "Direccion");
+
+                foreach (var employee in employees)
+                {
+                    dataGridView1.Rows.Add(
+                            employee.Id,
+                            employee.EmployeeName,
+                            employee.EmployeeLastName,
+                            employee.EmployeeAge,
+                            employee.EmployeeContact?.EmployeeEmail ?? "",
+                            employee.EmployeeContact?.EmployeePhone ?? "",
+                            employee.EmployeeContact?.EmployeeAddress ?? ""
+                        );
+                }
+
             }
             catch (Exception ex)
             {

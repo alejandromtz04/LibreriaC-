@@ -38,11 +38,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(78, 224);
+            this.dataGridView1.Location = new System.Drawing.Point(78, 220);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(848, 192);
+            this.dataGridView1.Size = new System.Drawing.Size(995, 192);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -59,9 +59,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(508, 94);
+            this.button2.Location = new System.Drawing.Point(315, 70);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 38);
+            this.button2.Size = new System.Drawing.Size(191, 74);
             this.button2.TabIndex = 2;
             this.button2.Text = "Nuevo registro";
             this.button2.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             // 
             // btnModifyClient
             // 
-            this.btnModifyClient.Location = new System.Drawing.Point(295, 83);
+            this.btnModifyClient.Location = new System.Drawing.Point(616, 70);
             this.btnModifyClient.Name = "btnModifyClient";
-            this.btnModifyClient.Size = new System.Drawing.Size(134, 61);
+            this.btnModifyClient.Size = new System.Drawing.Size(173, 74);
             this.btnModifyClient.TabIndex = 3;
             this.btnModifyClient.Text = "Modificar Registro";
             this.btnModifyClient.UseVisualStyleBackColor = true;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 462);
+            this.ClientSize = new System.Drawing.Size(1157, 462);
             this.Controls.Add(this.btnModifyClient);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
