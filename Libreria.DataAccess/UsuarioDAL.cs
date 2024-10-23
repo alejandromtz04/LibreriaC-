@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32;
+using Libreria.DataAccess;
 
 
 namespace Libreria.DataAccess
@@ -27,6 +28,7 @@ namespace Libreria.DataAccess
         public bool CreateUser(Usuario user)
         {
             bool result = false;
+            string encryptPassword = Utilities.EncodePassword(user.Password);
 
             using (SqlConnection _connection = new SqlConnection(_connectionString))
             {
@@ -35,8 +37,8 @@ namespace Libreria.DataAccess
                     _connection.Open();
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@Email", user.Email);
-                    cmd.Parameters.AddWithValue("@Password", user.Password);
+                    cmd.Parameters.AddWithValue("@UserName", user.UserName);
+                    cmd.Parameters.AddWithValue("@Password", encryptPassword);
                     
 
                     result = cmd.ExecuteNonQuery() > 0;
@@ -52,7 +54,7 @@ namespace Libreria.DataAccess
 
             using (SqlConnection _connection = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("spUserPasswordUpdate", _connection))
+                using (SqlCommand cmd = new SqlCommand("spChangePassword", _connection))
                 {
                     _connection.Open();
                     cmd.CommandType = CommandType.StoredProcedure;

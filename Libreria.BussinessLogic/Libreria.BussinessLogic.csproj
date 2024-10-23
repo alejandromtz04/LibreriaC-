@@ -46,6 +46,7 @@
     <Compile Include="InvoiceBL.cs" />
     <Compile Include="ProductBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Libreria.DataAccess\Libreria.DataAccess.csproj">

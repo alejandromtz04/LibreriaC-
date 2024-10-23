@@ -50,6 +50,7 @@
     <Compile Include="Product.Entity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Invoice.Entity.cs" />
+    <Compile Include="Usuario.Entity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

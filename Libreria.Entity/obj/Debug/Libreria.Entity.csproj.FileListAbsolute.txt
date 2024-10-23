@@ -10,3 +10,9 @@ C:\Users\Not4l\source\repos\Crud\Libreria.Entity\obj\Debug\Libreria.Entity.cspro
 C:\Users\Not4l\source\repos\Crud\Libreria.Entity\obj\Debug\Libreria.Entity.csproj.CoreCompileInputs.cache
 C:\Users\Not4l\source\repos\Crud\Libreria.Entity\obj\Debug\Libreria.Entity.dll
 C:\Users\Not4l\source\repos\Crud\Libreria.Entity\obj\Debug\Libreria.Entity.pdb
+C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Libreria.Entity\bin\Debug\Libreria.Entity.dll
+C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Libreria.Entity\bin\Debug\Libreria.Entity.pdb
+C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Libreria.Entity\obj\Debug\Libreria.Entity.csproj.AssemblyReference.cache
+C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Libreria.Entity\obj\Debug\Libreria.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Libreria.Entity\obj\Debug\Libreria.Entity.dll
+C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Libreria.Entity\obj\Debug\Libreria.Entity.pdb

@@ -52,3 +52,4 @@ C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librar
 C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Library..DF2CD066.Up2Date
 C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.exe
 C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.pdb
+C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.Login.resources
