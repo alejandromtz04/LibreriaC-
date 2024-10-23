@@ -53,3 +53,5 @@ C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librar
 C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.exe
 C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.pdb
 C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.Login.resources
+C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.UserView.resources
+C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.UserCreateView.resources

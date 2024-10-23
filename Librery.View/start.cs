@@ -57,5 +57,12 @@ namespace Librery.view
             login.Show();
             this.Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            UserView userView = new UserView();
+            userView.Show();
+            this.Hide();
+        }
     }
 }

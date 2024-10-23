@@ -47,6 +47,36 @@ namespace Libreria.DataAccess
             return result;
         }
 
+        public List<Usuario> GetAllUsers()
+        {
+            List<Usuario> usersList = new List<Usuario>();
+
+            using (SqlConnection _connnection = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("spUserGetAll", _connnection))
+                {
+                    _connnection.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Usuario user = new Usuario
+                            {
+                                // Get data from Client
+                                // ADD @ MAYBE
+
+                                Id = Convert.ToInt32(reader["Id"]),
+                                UserName = reader["UserName"].ToString(),
+                            };
+                            usersList.Add(user);
+                        }
+                    }
+                }
+            }
+            return usersList;
+        }
 
         public bool UpdatePassword(Usuario user)
         {
@@ -67,6 +97,31 @@ namespace Libreria.DataAccess
                 }
             }
             return result;
+        }
+
+        public bool Login(Usuario user)
+        {
+            bool isAuthenticated = false;
+            string encryptedPassword = Utilities.EncodePassword(user.Password);
+
+
+            using (SqlConnection _connection = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("spUserLogin", _connection))
+                {
+                    _connection.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@UserName", user.UserName);
+                    cmd.Parameters.AddWithValue ("@Password", encryptedPassword);
+
+                    var result = cmd.ExecuteScalar();
+
+                    isAuthenticated = result?.ToString() == "Login Exitoso";
+                }
+            }
+
+            return isAuthenticated;
         }
 
         public bool DeleteUser(int Id)

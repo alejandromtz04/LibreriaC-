@@ -35,7 +35,19 @@ namespace Libreria.BussinessLogic
             return Result;
         }
 
-
+        public List<Usuario> GetAllUsers()
+        {
+            List<Usuario> Result = null;
+            try
+            {
+                Result = UsuarioDAL.Instance.GetAllUsers();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al traer la lista de Usuarios: " + ex.Message);
+            }
+            return Result;
+        }
 
         public bool UpdatePassword(Usuario user)
         {
@@ -47,6 +59,20 @@ namespace Libreria.BussinessLogic
             catch (Exception ex)
             {
                 throw new Exception("Error al actualizar la contraseña: " + ex.Message);
+            }
+            return result;
+        }
+
+        public bool LoginUser(Usuario user)
+        {
+            bool result = false;
+            try
+            {
+                result = UsuarioDAL.Instance.Login(user);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al iniciar sesion: " + ex.Message);
             }
             return result;
         }

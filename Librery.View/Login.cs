@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Libreria.BussinessLogic;
+using Libreria.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +29,33 @@ namespace Librery.view
             start start = new start();
             start.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string userName = txtUserName.Text;
+            string password = txtPassword.Text;
+
+            Usuario user = new Usuario
+            {
+                UserName = userName,
+                Password = password
+            };
+
+            bool isAuthenticated = UsuarioBL.Instance.LoginUser(user);
+
+            if (isAuthenticated)
+            {
+                MessageBox.Show("Login exitoso. Bienvenido!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                start start = new start();
+                start.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos. Intenta nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }
