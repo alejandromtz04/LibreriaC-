@@ -106,6 +106,7 @@ namespace Libreria.DataAccess
                             invoice.Product = new Product
                             {
                                 ProductName = reader["ProductName"].ToString(),
+                                ProductCode = reader["ProductCode"].ToString(),
                                 ProductPrice = Convert.ToDecimal(reader["ProductPrice"])
                             };
 
