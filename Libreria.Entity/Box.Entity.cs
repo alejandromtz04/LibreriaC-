@@ -13,7 +13,7 @@ namespace Libreria.Entity
 
         public DateTime EndBox { get; set; }
         public string TotalSales { get; set; }
-        public bool state {  get; set; }
+        public bool State {  get; set; }
 
         // Relation with sales
     }
