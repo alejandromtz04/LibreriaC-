@@ -37,7 +37,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtBranchAddress = new System.Windows.Forms.TextBox();
@@ -45,7 +44,6 @@
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.txtGuestName = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
-            this.panelTotal = new System.Windows.Forms.Panel();
             this.comboBoxProductList = new System.Windows.Forms.ComboBox();
             this.comboBoxEmployeeName = new System.Windows.Forms.ComboBox();
             this.comboBoxClientName = new System.Windows.Forms.ComboBox();
@@ -136,15 +134,6 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Producto a vender";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(636, 402);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 16);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Total";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(376, 477);
@@ -200,13 +189,6 @@
             this.txtDescription.Size = new System.Drawing.Size(250, 22);
             this.txtDescription.TabIndex = 20;
             // 
-            // panelTotal
-            // 
-            this.panelTotal.Location = new System.Drawing.Point(871, 402);
-            this.panelTotal.Name = "panelTotal";
-            this.panelTotal.Size = new System.Drawing.Size(250, 32);
-            this.panelTotal.TabIndex = 21;
-            // 
             // comboBoxProductList
             // 
             this.comboBoxProductList.FormattingEnabled = true;
@@ -242,7 +224,6 @@
             this.Controls.Add(this.comboBoxClientName);
             this.Controls.Add(this.comboBoxEmployeeName);
             this.Controls.Add(this.comboBoxProductList);
-            this.Controls.Add(this.panelTotal);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtGuestName);
             this.Controls.Add(this.dtpDate);
@@ -250,7 +231,6 @@
             this.Controls.Add(this.txtBranchAddress);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -280,7 +260,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtBranchAddress;
@@ -288,7 +267,6 @@
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.TextBox txtGuestName;
         private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.Panel panelTotal;
         private System.Windows.Forms.ComboBox comboBoxProductList;
         private System.Windows.Forms.ComboBox comboBoxEmployeeName;
         private System.Windows.Forms.ComboBox comboBoxClientName;

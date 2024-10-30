@@ -20,18 +20,53 @@ namespace Libreria.BussinessLogic
             }
         }
 
-        public bool CreateInvoice(Invoice invoice, Employee employee, Client client, Product product)
+        // VERIFIES IF EXIST
+        /*
+        private bool IsEmployeeExists(Employee employee)
         {
-            bool Result = false;
+            var employeeNames = GetEmployeeNames();
+            return employeeNames.Contains(employee.EmployeeName);
+        }
+        */
+        /*
+        private bool IsClientExists(Client client)
+        {
+            var clientNames = GetClientNames();
+            return clientNames.Contains(client.ClientName);
+        }
+        */
+        /*
+        private bool IsProductExists(Product product)
+        {
+            var productNames = GetProducts();
+            return productNames.Contains(product.ProductName);
+        }
+        */
+        // CREATE METHOD OF BL
+        public bool CreateInvoice(Invoice invoice)
+        {
+            if (!ProductDAL.Instance.CheckIfProductExists(invoice.Product.Id))
+            {
+                throw new Exception("El producto no existe.");
+            }
+
+            int stock = ProductDAL.Instance.GetProductStock(invoice.Product.Id);
+
+            if (stock <= 0)
+            {
+                throw new Exception("El producto no tiene stock disponible.");
+            }
+
+            bool result = false;
             try
             {
-                Result = InvoiceDAL.Instance.CreateInvoice(invoice, employee, client, product);
+                result = InvoiceDAL.Instance.CreateInvoice(invoice);
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al crear la Factura: " + ex.Message);
+                throw new Exception("Error al crear la factura: " + ex.Message);
             }
-            return Result;
+            return result;
         }
 
         public List<Invoice> GetAllInvoices()
@@ -48,49 +83,75 @@ namespace Libreria.BussinessLogic
             return Result;
         }
 
-        public List<string> GetProductNames()
+        public List<Product> GetProducts()
         {
-            List<string> Result = null;
             try
             {
-                Result = InvoiceDAL.Instance.GetProductNames();
+                return InvoiceDAL.Instance.GetProducts();
             }
             catch (Exception ex)
             {
                 throw new Exception("Error al traer la lista de Productos: " + ex.Message);
 
             }
-            return Result;
         }
 
-        public List<string> GetEmployeeNames()
+        public List<Employee> GetEmployeeNames()
         {
-            List<string> Result = null;
             try
             {
-                Result = InvoiceDAL.Instance.GetEmployeeNames();
+                return InvoiceDAL.Instance.GetEmployees();
             }
             catch (Exception ex)
             {
                 throw new Exception("Error al traer la lista de Empleados: " + ex.Message);
 
             }
-            return Result;
         }
 
-        public List<string> GetClientNames()
+        public List<Client> GetClientNames()
         {
-            List<string> Result = null;
+
             try
             {
-                Result = InvoiceDAL.Instance.GetClientNames();
+                return InvoiceDAL.Instance.GetClients();
             }
             catch (Exception ex)
             {
                 throw new Exception("Error al traer la lista de Clientes: " + ex.Message);
 
             }
-            return Result;
         }
+
+        public decimal CalculateTotal(int productId, int quantity)
+        {
+
+            if (quantity < 0)
+            {
+                throw new ArgumentException("La cantidad no puede ser negativa.");
+            }
+
+            decimal productPrice = InvoiceDAL.Instance.GetProductPrice(productId);
+
+            if (productPrice < 0)
+            {
+                throw new InvalidOperationException("El precio del producto no puede ser negativo.");
+            }
+
+            return productPrice * quantity;
+        }
+        /*
+        public bool CheckProductStock(int productId, int quantity)
+        {
+            // Obtener el producto del DAL
+            var product = InvoiceDAL.Instance.GetProductById(productId);
+            if (product != null)
+            {
+                // Verificar si hay suficiente stock
+                return product.ProductStock >= quantity; // Asumiendo que ProductStock es la propiedad que contiene el stock disponible
+            }
+            return false; // Producto no encontrado o sin stock
+        }
+        */
     }
 }

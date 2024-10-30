@@ -22,39 +22,29 @@ namespace Libreria.DataAccess
         }
 
 
-        public bool CreateInvoice(Invoice invoice, Employee employee, Client client, Product product)
+        public bool CreateInvoice(Invoice invoice)
         {
             bool result = false;
-
-            using (SqlConnection _connection = new SqlConnection(_connectionString))
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("spCreateInvoice", _connection))
+                using (SqlCommand command = new SqlCommand("spInvoiceCreate", connection))
                 {
-                    _connection.Open();
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    command.CommandType = CommandType.StoredProcedure;
 
+                    // Asignar parámetros
+                    command.Parameters.AddWithValue("@BranchAddress", invoice.BranchAddress);
+                    command.Parameters.AddWithValue("@InvoiceDescription", invoice.InvoiceDescription);
+                    command.Parameters.AddWithValue("@Quantity", invoice.Quantity);
+                    command.Parameters.AddWithValue("@TotalAmount", invoice.TotalAmount);
+                    command.Parameters.AddWithValue("@InvoiceDate", invoice.InvoiceDate);
+                    command.Parameters.AddWithValue("@EmployeeId", invoice.Employee.Id);
+                    command.Parameters.AddWithValue("@ClientId", (object)invoice.Client?.Id ?? DBNull.Value); // Manejo de valor nulo
+                    command.Parameters.AddWithValue("@ProductId", invoice.Product.Id);
+                    command.Parameters.AddWithValue("@GuestName", (object)invoice.GuestName ?? DBNull.Value); // Manejo de valor nulo
 
-                    cmd.Parameters.AddWithValue("@BranchAddress", invoice.BranchAddress);
-                    cmd.Parameters.AddWithValue("@InvoiceDescription", invoice.InvoiceDescription);
-                    cmd.Parameters.AddWithValue("@Quantity", invoice.Quantity);
-                    cmd.Parameters.AddWithValue("@TotalAmount", invoice.TotalAmount);
-                    cmd.Parameters.AddWithValue("@InvoiceDate", invoice.InvoiceDate);
-
-                    // Employee
-
-                    cmd.Parameters.AddWithValue("@EmployeeId", employee.Id);
-
-                    // Client
-
-                    cmd.Parameters.AddWithValue("@ClientId", client != null ? client.Id : (object)DBNull.Value);
-                    // Product
-
-                    cmd.Parameters.AddWithValue("@ProductId", product.Id);
-                    //cmd.Parameters.AddWithValue("@ProductPrice", product.ProductPrice);
-
-                    cmd.Parameters.AddWithValue("@GuestName", invoice.GuestName ?? (object)DBNull.Value);
-
-                    result = cmd.ExecuteNonQuery() > 0;
+                    // Abrir conexión y ejecutar el procedimiento almacenado
+                    connection.Open();
+                    result = command.ExecuteNonQuery() > 0;
                 }
             }
             return result;
@@ -120,81 +110,122 @@ namespace Libreria.DataAccess
         }
 
 
-        public List<string> GetProductNames()
+        public List<Product> GetProducts()
         {
-            var productNames = new List<string>();
+            var products = new List<Product>();
 
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT ProductName FROM Product WHERE State = 1", connection))
+                using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
-                    connection.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlCommand cmd = new SqlCommand("SELECT Id, ProductName FROM Product WHERE State = 1", connection))
                     {
-                        while (reader.Read())
+                        connection.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            productNames.Add(reader["ProductName"].ToString());
+                            while (reader.Read())
+                            {
+                                var product = new Product
+                                {
+                                    Id = (int)reader["Id"], // Asegúrate de que tienes una propiedad Id en tu clase Product
+                                    ProductName = reader["ProductName"].ToString()
+                                };
+                                products.Add(product);
+                            }
                         }
                     }
                 }
             }
-            return productNames;
+            catch (Exception ex)
+            {
+                throw new Exception("Error al traer la lista de Productos: " + ex.Message);
+            }
+
+            return products;
         }
 
 
-        public List<string> GetEmployeeNames()
+        public List<Employee> GetEmployees()
         {
-            var employeeNames = new List<string>();
+            var employees = new List<Employee>();
 
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT EmployeeName FROM Employee WHERE State = 1", connection))
+                using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
-                    connection.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlCommand cmd = new SqlCommand("SELECT Id, EmployeeName FROM Employee WHERE State = 1", connection))
                     {
-                        while (reader.Read())
+                        connection.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            employeeNames.Add(reader["EmployeeName"].ToString());
+                            while (reader.Read())
+                            {
+                                var employee = new Employee
+                                {
+                                    Id = (int)reader["Id"], // Asegúrate de que tienes una propiedad Id en tu clase Employee
+                                    EmployeeName = reader["EmployeeName"].ToString()
+                                };
+                                employees.Add(employee);
+                            }
                         }
                     }
                 }
             }
-            return employeeNames;
+            catch (Exception ex)
+            {
+                throw new Exception("Error al traer la lista de Empleados: " + ex.Message);
+            }
+
+            return employees;
         }
 
 
-        public List<string> GetClientNames()
-        {
-            var clientNames = new List<string>();
 
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+        public List<Client> GetClients()
+        {
+            var clients = new List<Client>();
+
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT ClientName FROM Client WHERE State = 1", connection))
+                using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
-                    connection.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlCommand cmd = new SqlCommand("SELECT Id, ClientName FROM Client WHERE State = 1", connection))
                     {
-                        while (reader.Read())
+                        connection.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            clientNames.Add(reader["ClientName"].ToString());
+                            while (reader.Read())
+                            {
+                                var client = new Client
+                                {
+                                    Id = (int)reader["Id"], // Asegúrate de que tienes una propiedad Id en tu clase Client
+                                    ClientName = reader["ClientName"].ToString()
+                                };
+                                clients.Add(client);
+                            }
                         }
                     }
                 }
             }
-            return clientNames;
+            catch (Exception ex)
+            {
+                throw new Exception("Error al traer la lista de Clientes: " + ex.Message);
+            }
+
+            return clients;
         }
 
 
-        public decimal GetProductPrice(string productName)
+
+        public decimal GetProductPrice(int productId)
         {
             decimal productPrice = 0;
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT ProductPrice FROM Product WHERE ProductName = @ProductName", conn))
+                using (SqlCommand cmd = new SqlCommand("SELECT ProductPrice FROM Product WHERE Id = @Id", conn))
                 {
-                    cmd.Parameters.AddWithValue("@ProductName", productName);
+                    cmd.Parameters.AddWithValue("@Id", productId);
                     conn.Open();
                     var result = cmd.ExecuteScalar();
 
@@ -207,6 +238,7 @@ namespace Libreria.DataAccess
 
             return productPrice;
         }
+
 
     }
 }

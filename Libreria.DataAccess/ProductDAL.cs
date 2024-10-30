@@ -137,5 +137,60 @@ namespace Libreria.DataAccess
             }
             return result;
         }
+
+
+        public bool CheckIfProductExists(int productId)
+        {
+            bool exists = false;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(_connectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT COUNT(1) FROM Product WHERE Id = @productId AND State = 1", connection))
+                    {
+                        cmd.Parameters.AddWithValue("@productId", productId);
+                        connection.Open();
+                        exists = Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al verificar la existencia del producto: " + ex.Message);
+            }
+
+            return exists;
+        }
+
+
+        public int GetProductStock(int productId)
+        {
+            int stock = 0;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(_connectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT ProductStock FROM ProductCategory WHERE Id = (SELECT ProductCategory.Id FROM Product WHERE Product.Id = @productId)", connection))
+                    {
+                        cmd.Parameters.AddWithValue("@productId", productId);
+                        connection.Open();
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            stock = Convert.ToInt32(result);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener el stock del producto: " + ex.Message);
+            }
+
+            return stock;
+        }
+
     }
 }
