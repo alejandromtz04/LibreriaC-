@@ -92,7 +92,7 @@ namespace Libreria.DataAccess
             return productsList;
         }
 
-        public bool UpdateProduct(Product product, ProductCategory productCategory)
+        public bool UpdateProduct(Product product)
         {
             bool result = false;
 
@@ -109,8 +109,8 @@ namespace Libreria.DataAccess
                     cmd.Parameters.AddWithValue("@ProductDescription", product.ProductDescription);
                     cmd.Parameters.AddWithValue("@ProductPrice", product.ProductPrice);
 
-                    cmd.Parameters.AddWithValue("@ProductCategoryName", productCategory.ProductCategoryName);
-                    cmd.Parameters.AddWithValue("@ProductStock", productCategory.ProductStock);
+                    cmd.Parameters.AddWithValue("@ProductCategoryName", product.ProductCategory.ProductCategoryName);
+                    cmd.Parameters.AddWithValue("@ProductStock", product.ProductCategory.ProductStock);
 
                     result = cmd.ExecuteNonQuery() > 0;
                     //cmd.Parameters.AddWithValue("@ProductStock")

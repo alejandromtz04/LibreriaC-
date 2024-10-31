@@ -21,6 +21,7 @@ namespace Librery.view
         private void ProductView_Load(object sender, EventArgs e)
         {
             GetProductList();
+            btnModify.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,6 +74,48 @@ namespace Librery.view
             ProductCreateView productCreateView = new ProductCreateView();
             productCreateView.Show();
             this.Hide();
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                var selectedRow = dataGridView1.SelectedRows[0];
+
+                int clientId = (int)selectedRow.Cells["Id"].Value;
+                string productName = (string)selectedRow.Cells["ProductName"].Value;
+                string productCode = (string)selectedRow.Cells["ProductCode"].Value;
+                string productDescription = (string)selectedRow.Cells["ProductDescription"].Value;
+                decimal productPrice = (decimal)selectedRow.Cells["ProductPrice"].Value;
+                string productCategory = (string)selectedRow.Cells["ProductCategoryName"].Value;
+                int productStock = (int)selectedRow.Cells["ProductStock"].Value;
+
+                ProductModifyView productModifyView = new ProductModifyView(clientId, productName, productCode, productDescription, productPrice, productCategory, productStock);
+
+                if (productModifyView.ShowDialog() == DialogResult.OK)
+                {
+                    GetProductList();
+                }
+                this.Hide();
+
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                btnModify.Enabled = true;
+            } 
+            else
+            {
+                btnModify.Enabled = false;
+            }
         }
     }
 }

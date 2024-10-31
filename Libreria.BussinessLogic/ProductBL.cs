@@ -49,12 +49,12 @@ namespace Libreria.BussinessLogic
             return Result;
         }
 
-        public bool UpdateProduct(Product product, ProductCategory productCategory)
+        public bool UpdateProduct(Product product)
         {
             bool result = false;
             try
             {
-                result = ProductDAL.Instance.UpdateProduct(product, productCategory);
+                result = ProductDAL.Instance.UpdateProduct(product);
             }
             catch (Exception ex)
             {

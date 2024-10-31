@@ -20,29 +20,6 @@ namespace Libreria.BussinessLogic
             }
         }
 
-        // VERIFIES IF EXIST
-        /*
-        private bool IsEmployeeExists(Employee employee)
-        {
-            var employeeNames = GetEmployeeNames();
-            return employeeNames.Contains(employee.EmployeeName);
-        }
-        */
-        /*
-        private bool IsClientExists(Client client)
-        {
-            var clientNames = GetClientNames();
-            return clientNames.Contains(client.ClientName);
-        }
-        */
-        /*
-        private bool IsProductExists(Product product)
-        {
-            var productNames = GetProducts();
-            return productNames.Contains(product.ProductName);
-        }
-        */
-        // CREATE METHOD OF BL
         public bool CreateInvoice(Invoice invoice)
         {
             if (!ProductDAL.Instance.CheckIfProductExists(invoice.Product.Id))
