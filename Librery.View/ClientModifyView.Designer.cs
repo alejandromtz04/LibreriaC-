@@ -112,7 +112,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(166, 517);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 38);
+            this.button1.Size = new System.Drawing.Size(153, 49);
             this.button1.TabIndex = 17;
             this.button1.Text = "volver a productos";
             this.button1.UseVisualStyleBackColor = true;

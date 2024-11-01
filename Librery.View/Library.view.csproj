@@ -70,6 +70,12 @@
     <Compile Include="EmployeeCreateView.Designer.cs">
       <DependentUpon>EmployeeCreateView.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeModifyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeModifyView.Designer.cs">
+      <DependentUpon>EmployeeModifyView.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeCreateView.resx">
       <DependentUpon>EmployeeCreateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeModifyView.resx">
+      <DependentUpon>EmployeeModifyView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeView.resx">
       <DependentUpon>EmployeeView.cs</DependentUpon>

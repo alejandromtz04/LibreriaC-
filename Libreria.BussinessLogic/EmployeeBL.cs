@@ -48,12 +48,12 @@ namespace Libreria.BussinessLogic
             return Result;
         }
 
-        public bool UpdateClient(Employee employee, EmployeeContact employeeContact)
+        public bool UpdateEmployee(Employee employee)
         {
             bool result = false;
             try
             {
-                result = EmployeeDAL.Instance.UpdateEmployee(employee, employeeContact);
+                result = EmployeeDAL.Instance.UpdateEmployee(employee);
             }
             catch (Exception ex)
             {

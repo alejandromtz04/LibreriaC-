@@ -77,7 +77,7 @@ namespace Libreria.DataAccess
                                 EmployeeName = reader["EmployeeName"].ToString(),
                                 EmployeeLastName = reader["EmployeeLastName"].ToString(),
                                 EmployeeAge = Convert.ToInt32(reader["EmployeeAge"]),
-                                //State = true
+                                //ate = true
                             };
 
                             // Get and save data from EmployeeContact
@@ -99,7 +99,7 @@ namespace Libreria.DataAccess
 
 
         // Must be fix this
-        public bool UpdateEmployee(Employee employee, EmployeeContact employeeContact)
+        public bool UpdateEmployee(Employee employee)
         {
             bool result = false;
 
@@ -115,9 +115,9 @@ namespace Libreria.DataAccess
                     cmd.Parameters.AddWithValue("@EmployeeLastName", employee.EmployeeLastName);
                     cmd.Parameters.AddWithValue("@EmployeeAge", employee.EmployeeAge);
 
-                    cmd.Parameters.AddWithValue("@EmployeeEmail", employeeContact.EmployeeEmail);
-                    cmd.Parameters.AddWithValue("@EmployeePhone", employeeContact.EmployeePhone);
-                    cmd.Parameters.AddWithValue("@EmployeeAddress", employeeContact.EmployeeAddress);
+                    cmd.Parameters.AddWithValue("@EmployeeEmail", employee.EmployeeContact.EmployeeEmail);
+                    cmd.Parameters.AddWithValue("@EmployeePhone", employee.EmployeeContact.EmployeePhone);
+                    cmd.Parameters.AddWithValue("@EmployeeAddress", employee.EmployeeContact.EmployeeAddress);
 
                     result = cmd.ExecuteNonQuery() > 0;
                 }

@@ -56,3 +56,4 @@ C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librer
 C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.UserView.resources
 C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.UserCreateView.resources
 C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.ProductModifyView.resources
+C:\Users\Not4l\source\repos\LibraryCRUD\LibreriaC-\Librery.view\obj\Debug\Librery.view.EmployeeModifyView.resources

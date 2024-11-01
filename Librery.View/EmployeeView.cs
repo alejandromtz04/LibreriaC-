@@ -28,6 +28,7 @@ namespace Librery.view
         private void EmployeeView_Load(object sender, EventArgs e)
         {
             GetListEmployees();
+            btnModify.Enabled = false;
         }
 
         private void GetListEmployees()
@@ -72,6 +73,42 @@ namespace Librery.view
             EmployeeCreateView employeeCreateView = new EmployeeCreateView();
             employeeCreateView.Show();
             this.Hide();
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                var selectedRows = dataGridView1.SelectedRows[0];
+
+                int employeeId = (int)selectedRows.Cells["Id"].Value;
+                string employeeName = (string)selectedRows.Cells["EmployeeName"].Value;
+                string employeeLastName = (string)selectedRows.Cells["EmployeeLastName"].Value;
+                int employeeAge = (int)selectedRows.Cells["EmployeeAge"].Value;
+                string employeeEmail = (string)selectedRows.Cells["EmployeeEmail"].Value;
+                string employeePhone = (string)selectedRows.Cells["EmployeePhone"].Value;
+                string employeeAddress = (string)selectedRows.Cells["EmployeeAddress"].Value;
+
+                EmployeeModifyView employeeModifyView = new EmployeeModifyView(employeeId, employeeName, employeeLastName, employeeAge, employeeEmail, employeePhone, employeeAddress);
+
+                if (employeeModifyView.ShowDialog() == DialogResult.OK)
+                {
+                    GetListEmployees();
+                }
+                this.Hide();
+            }
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                btnModify.Enabled = true;
+            }
+            else
+            {
+                btnModify.Enabled = false;
+            }
         }
     }
 }
