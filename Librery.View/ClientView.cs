@@ -29,6 +29,7 @@ namespace Librery.view
         private void ClientView_Load(object sender, EventArgs e)
         {
             btnModifyClient.Enabled = false;
+            btnDelete.Enabled = false;
             GetListClients();
         }
 
@@ -110,15 +111,46 @@ namespace Librery.view
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 btnModifyClient.Enabled = true;
+                btnDelete.Enabled = true;
             } else
             {
                 btnModifyClient.Enabled = false;
+                btnDelete.Enabled = false;
             }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedClientId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+
+                bool isDeleted = false;
+
+                try
+                {
+                    isDeleted = ClientBL.Instance.DeleteClient(selectedClientId);
+                }
+                 catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al eliminar el cliente: " + ex.Message);
+
+                }
+                if (isDeleted)
+                {
+                    MessageBox.Show("Cliente eliminado con éxito.");
+                    GetListClients();
+                } else
+                {
+                    MessageBox.Show("No se pudo eliminar el cliente.");
+                }
+
+            }
         }
     }
 }

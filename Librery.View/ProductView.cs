@@ -22,6 +22,7 @@ namespace Librery.view
         {
             GetProductList();
             btnModify.Enabled = false;
+            btnDeleteProduct.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -111,10 +112,40 @@ namespace Librery.view
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 btnModify.Enabled = true;
+                btnDeleteProduct.Enabled = true;
             } 
             else
             {
                 btnModify.Enabled = false;
+                btnDeleteProduct.Enabled = false;
+            }
+        }
+
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedProductId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+
+                bool isDeleted = false;
+
+                try
+                {
+                    isDeleted = ProductBL.Instance.DeleteProduct(selectedProductId);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al eliminar el Producto: " + ex.Message);
+                }
+                if (isDeleted)
+                {
+                    MessageBox.Show("Producto eliminado con éxito.");
+                    GetProductList();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el Producto.");
+                }
             }
         }
     }

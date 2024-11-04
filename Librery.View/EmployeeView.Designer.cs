@@ -32,6 +32,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
+            this.btnDeleteEmployee = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,19 +69,30 @@
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(622, 58);
+            this.btnModify.Location = new System.Drawing.Point(642, 58);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(180, 63);
             this.btnModify.TabIndex = 3;
-            this.btnModify.Text = "Modificar";
+            this.btnModify.Text = "Modificar Registro";
             this.btnModify.UseVisualStyleBackColor = true;
             this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
+            // 
+            // btnDeleteEmployee
+            // 
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(935, 58);
+            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(180, 63);
+            this.btnDeleteEmployee.TabIndex = 4;
+            this.btnDeleteEmployee.Text = "Eliminar Registro";
+            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.button2_Click);
             // 
             // EmployeeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1288, 516);
+            this.Controls.Add(this.btnDeleteEmployee);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.dataGridView1);
@@ -99,5 +111,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.Button btnDeleteEmployee;
     }
 }

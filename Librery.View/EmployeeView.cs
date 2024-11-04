@@ -29,6 +29,7 @@ namespace Librery.view
         {
             GetListEmployees();
             btnModify.Enabled = false;
+            btnDeleteEmployee.Enabled = false;
         }
 
         private void GetListEmployees()
@@ -104,10 +105,41 @@ namespace Librery.view
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 btnModify.Enabled = true;
+                btnDeleteEmployee.Enabled = true;
             }
             else
             {
+                btnDeleteEmployee.Enabled = false;
                 btnModify.Enabled = false;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e) //delete
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedEmployeeId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+
+                bool isDeleted = false;
+
+                try
+                {
+                    isDeleted = EmployeeBL.Instance.DeleteEmployee(selectedEmployeeId);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al eliminar el Employee: " + ex.Message);
+                }
+
+                if (isDeleted)
+                {
+                    MessageBox.Show("Empleado eliminado con éxito.");
+                    GetListEmployees();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el Empleado.");
+                }
             }
         }
     }
