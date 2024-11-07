@@ -13,7 +13,7 @@ namespace Libreria.DataAccess
 {
     public class ClientDAL: Connection
     {
-
+        // crea la instancia de cliente
         private static ClientDAL _instance;
 
         public static ClientDAL Instance
@@ -23,17 +23,25 @@ namespace Libreria.DataAccess
                 return _instance ?? (_instance = new ClientDAL());
             }
         }
+
+        // metodo de creear cliente
         public bool CreateClient(Client client, ClientContact clientContact)
         {
             bool result = false;
 
+            // usamos la conexion sql y le pasamos como parametro _connectionstring
+
             using (SqlConnection _connection = new SqlConnection(_connectionString))
             {
+                // usamos la consola de comandos de sql y ejecutamos el procedimiento almacenado
                 using (SqlCommand cmd = new SqlCommand("spClientCreate", _connection)) 
                 { 
+                    // abrimos la conexion
                     _connection.Open();
+                    // le decimos que tipo de comando sera, en este caso es de tipo procedimiento almacenado
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    // pasamos los datos
                     cmd.Parameters.AddWithValue("@ClientName", client.ClientName);
                     cmd.Parameters.AddWithValue("@ClientLastName", client.ClientLastName);
                     cmd.Parameters.AddWithValue("@ClientAge", client.ClientAge);
@@ -44,14 +52,18 @@ namespace Libreria.DataAccess
                     cmd.Parameters.AddWithValue("@ClientAddress", clientContact.ClientAddress);
                     //cmd.Parameters.AddWithValue("@State", clientContact.State);
 
+                    // result se establecera verdadero si al ejecutar la query es diferente de 0
                     result = cmd.ExecuteNonQuery() > 0;
                 }
             }
             return result;
         }
 
+
+        // metodo obtener todos los clientes
         public List<Client> GetAllClients()
         {
+           // creamos una lista de tipo cliente
             List<Client> clientList = new List<Client>();
 
             using (SqlConnection _connnection = new SqlConnection(_connectionString))
@@ -63,6 +75,9 @@ namespace Libreria.DataAccess
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
+
+                        // mientras este habilitado el reader se crearan 2 objetos nuevos
+                        // cliente y contacto de cliente
                         while (reader.Read())
                         {
                             Client client = new Client
@@ -84,6 +99,8 @@ namespace Libreria.DataAccess
                             };
 
                             client.ClientContact = clientContact;
+
+                            // a;adimos cliente a la lista
                             clientList.Add(client);
 
                             // Get and save data from ClientContact
@@ -92,19 +109,26 @@ namespace Libreria.DataAccess
                     }
                 }
             }
+            //retorna la lista de clientes
             return clientList;
         }
 
-
+        // actualizar cliente
         public bool UpdateClient(Client client)
         {
+
+            // establecemos un resultado falso
             bool result = false;
 
             using (SqlConnection _connection = new SqlConnection(_connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand("spClientUpdate", _connection))
                 {
+
+                    // abrimos la conexion
                     _connection.Open();
+
+                    // tipo de consulta
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@Id", client.Id);
@@ -116,12 +140,16 @@ namespace Libreria.DataAccess
                     cmd.Parameters.AddWithValue("@ClientPhone", client.ClientContact.ClientPhone);
                     cmd.Parameters.AddWithValue("@ClientAddress", client.ClientContact.ClientAddress);
 
+                    // devolvemos el resultado
                     result = cmd.ExecuteNonQuery() > 0;
                 }
             }
+            // retornamos el resultado
             return result;
         }
 
+
+        // borrar cliente
         public bool DeleteClient(int Id)
         {
             bool result = false;
@@ -130,8 +158,12 @@ namespace Libreria.DataAccess
             {
                 using (SqlCommand cmd = new SqlCommand("spClientDelete", _connection))
                 {
+                    // abrimos la conexion
                     _connection.Open();
+
+                    // tipo de procedimiento almacenado
                     cmd.CommandType = CommandType.StoredProcedure;
+                    //pasamos el id
                     cmd.Parameters.AddWithValue("@Id", Id);
 
                     result = cmd.ExecuteNonQuery() > 0;

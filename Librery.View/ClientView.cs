@@ -16,9 +16,11 @@ namespace Librery.view
     {
         public ClientView()
         {
+            //inicializamos todo
             InitializeComponent();
         }
 
+        // definimos dentro de este metodo que sera usado para volver a la pantalla de inicio
         private void button1_Click(object sender, EventArgs e)
         {
             start start = new start();
@@ -26,6 +28,7 @@ namespace Librery.view
             this.Close();
         }
 
+        // carga la vista de cliente y establece los botonos de modificar y eliminar en falso
         private void ClientView_Load(object sender, EventArgs e)
         {
             btnModifyClient.Enabled = false;
@@ -94,6 +97,8 @@ namespace Librery.view
                 string clientPhone = (string)selectedRow.Cells["ClientPhone"].Value;
                 string clientAddress = (string)selectedRow.Cells["ClientAddress"].Value;
 
+
+                // recibe como parametros los datos anteriores para que carguen en la lista de cliente
                 ClientModifyView clientModifyView = new ClientModifyView(clientId, clientName, clientLastName, clientAge, clientEmail, clientPhone, clientAddress);
                 
 
@@ -106,6 +111,8 @@ namespace Librery.view
         }
 
         // SELECT A REGISTER TO BE MODIFIED
+
+        // si hay un registro seleccionado entonces activa los botones de modificar y eliminar
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -124,6 +131,7 @@ namespace Librery.view
 
         }
 
+        // similar a modificar este solo selecciona el id y posteriormente envia los datos para poder ser eliminados
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)

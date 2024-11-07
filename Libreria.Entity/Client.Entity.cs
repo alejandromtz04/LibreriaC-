@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Libreria.Entity
 {
+    //entidad de cliente
     public class Client
     {
         public int Id { get; set; }
@@ -15,6 +16,7 @@ namespace Libreria.Entity
 
         public bool State { get; set; } = true;
 
+        //relacion entre contacto de cliente
         public ClientContact ClientContact { get; set; }
     }
 }
