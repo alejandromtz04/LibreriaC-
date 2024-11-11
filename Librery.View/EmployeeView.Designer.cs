@@ -39,7 +39,7 @@
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(20, 160);
+            this.button1.Location = new System.Drawing.Point(11, 200);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 70);
@@ -65,7 +65,7 @@
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
             this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCreate.Location = new System.Drawing.Point(20, 75);
+            this.btnCreate.Location = new System.Drawing.Point(11, 115);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(70, 70);
@@ -78,10 +78,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sporting Grotesque", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(250, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 47);
+            this.label1.Size = new System.Drawing.Size(161, 33);
             this.label1.TabIndex = 3;
             this.label1.Text = "Empleados";
             // 
