@@ -107,7 +107,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(48, 285);
+            this.label6.Location = new System.Drawing.Point(48, 272);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 19);
@@ -118,7 +118,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(46, 335);
+            this.label7.Location = new System.Drawing.Point(46, 325);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 19);
@@ -152,7 +152,7 @@
             // 
             // txtEmployeePhone
             // 
-            this.txtEmployeePhone.Location = new System.Drawing.Point(154, 287);
+            this.txtEmployeePhone.Location = new System.Drawing.Point(154, 274);
             this.txtEmployeePhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeePhone.Name = "txtEmployeePhone";
             this.txtEmployeePhone.Size = new System.Drawing.Size(187, 20);
@@ -168,7 +168,7 @@
             // 
             // txtEmployeeAddress
             // 
-            this.txtEmployeeAddress.Location = new System.Drawing.Point(154, 340);
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(154, 330);
             this.txtEmployeeAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeAddress.Name = "txtEmployeeAddress";
             this.txtEmployeeAddress.Size = new System.Drawing.Size(187, 20);
