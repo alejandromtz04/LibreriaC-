@@ -41,7 +41,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(80, 191);
+            this.button1.Location = new System.Drawing.Point(80, 205);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 125);
@@ -55,7 +55,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(218, 191);
+            this.button2.Location = new System.Drawing.Point(218, 205);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 125);
@@ -69,7 +69,7 @@
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(218, 59);
+            this.button4.Location = new System.Drawing.Point(218, 73);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(132, 128);
@@ -83,7 +83,7 @@
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(80, 59);
+            this.button5.Location = new System.Drawing.Point(80, 73);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(134, 128);
@@ -99,7 +99,7 @@
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
-            this.exit.Location = new System.Drawing.Point(183, 335);
+            this.exit.Location = new System.Drawing.Point(183, 349);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(72, 71);
             this.exit.TabIndex = 5;
