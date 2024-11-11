@@ -62,7 +62,7 @@
             // btnClientCreate
             // 
             this.btnClientCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnClientCreate.Image")));
-            this.btnClientCreate.Location = new System.Drawing.Point(219, 366);
+            this.btnClientCreate.Location = new System.Drawing.Point(207, 366);
             this.btnClientCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnClientCreate.Name = "btnClientCreate";
             this.btnClientCreate.Size = new System.Drawing.Size(75, 75);
