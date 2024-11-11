@@ -61,11 +61,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sporting Grotesque", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(99, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(305, 47);
+            this.label2.Size = new System.Drawing.Size(220, 33);
             this.label2.TabIndex = 15;
             this.label2.Text = "Nuevo producto";
             // 
@@ -127,7 +127,7 @@
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(161, 384);
+            this.button1.Location = new System.Drawing.Point(125, 382);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(48, 60);
@@ -140,7 +140,7 @@
             // button2
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(250, 384);
+            this.button2.Location = new System.Drawing.Point(214, 382);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(48, 60);
@@ -152,7 +152,7 @@
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(276, 75);
+            this.txtProductName.Location = new System.Drawing.Point(204, 76);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(187, 20);
@@ -161,7 +161,7 @@
             // 
             // txtProductCode
             // 
-            this.txtProductCode.Location = new System.Drawing.Point(276, 138);
+            this.txtProductCode.Location = new System.Drawing.Point(204, 139);
             this.txtProductCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductCode.Name = "txtProductCode";
             this.txtProductCode.Size = new System.Drawing.Size(187, 20);
@@ -169,7 +169,7 @@
             // 
             // txtProductDescription
             // 
-            this.txtProductDescription.Location = new System.Drawing.Point(276, 190);
+            this.txtProductDescription.Location = new System.Drawing.Point(204, 191);
             this.txtProductDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductDescription.Name = "txtProductDescription";
             this.txtProductDescription.Size = new System.Drawing.Size(187, 20);
@@ -177,7 +177,7 @@
             // 
             // txtProductPrice
             // 
-            this.txtProductPrice.Location = new System.Drawing.Point(276, 241);
+            this.txtProductPrice.Location = new System.Drawing.Point(204, 242);
             this.txtProductPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductPrice.Name = "txtProductPrice";
             this.txtProductPrice.Size = new System.Drawing.Size(187, 20);
@@ -185,7 +185,7 @@
             // 
             // txtProductCategory
             // 
-            this.txtProductCategory.Location = new System.Drawing.Point(276, 290);
+            this.txtProductCategory.Location = new System.Drawing.Point(204, 291);
             this.txtProductCategory.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductCategory.Name = "txtProductCategory";
             this.txtProductCategory.Size = new System.Drawing.Size(187, 20);
@@ -193,7 +193,7 @@
             // 
             // numProductStock
             // 
-            this.numProductStock.Location = new System.Drawing.Point(276, 334);
+            this.numProductStock.Location = new System.Drawing.Point(204, 335);
             this.numProductStock.Margin = new System.Windows.Forms.Padding(2);
             this.numProductStock.Name = "numProductStock";
             this.numProductStock.Size = new System.Drawing.Size(90, 20);
@@ -204,7 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(503, 471);
+            this.ClientSize = new System.Drawing.Size(427, 471);
             this.Controls.Add(this.numProductStock);
             this.Controls.Add(this.txtProductCategory);
             this.Controls.Add(this.txtProductPrice);
