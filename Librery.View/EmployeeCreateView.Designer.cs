@@ -50,11 +50,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sporting Grotesque", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(61, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(362, 47);
+            this.label1.Size = new System.Drawing.Size(267, 33);
             this.label1.TabIndex = 14;
             this.label1.Text = "Nuevo Colaborador";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -85,7 +85,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 170);
+            this.label4.Location = new System.Drawing.Point(48, 166);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 19);
@@ -96,7 +96,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(49, 232);
+            this.label5.Location = new System.Drawing.Point(48, 220);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 19);
@@ -143,7 +143,7 @@
             // 
             // txtEmployeeEmail
             // 
-            this.txtEmployeeEmail.Location = new System.Drawing.Point(154, 224);
+            this.txtEmployeeEmail.Location = new System.Drawing.Point(154, 219);
             this.txtEmployeeEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
             this.txtEmployeeEmail.Size = new System.Drawing.Size(187, 20);
@@ -160,7 +160,7 @@
             // 
             // numEmployeeAge
             // 
-            this.numEmployeeAge.Location = new System.Drawing.Point(154, 175);
+            this.numEmployeeAge.Location = new System.Drawing.Point(154, 169);
             this.numEmployeeAge.Margin = new System.Windows.Forms.Padding(2);
             this.numEmployeeAge.Name = "numEmployeeAge";
             this.numEmployeeAge.Size = new System.Drawing.Size(90, 20);
